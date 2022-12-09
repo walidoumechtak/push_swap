@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotateA.c                                          :+:      :+:    :+:   */
+/*   rotateB.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 12:53:53 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/09 12:53:53 by woumecht         ###   ########.fr       */
+/*   Created: 2022/12/09 14:43:13 by woumecht          #+#    #+#             */
+/*   Updated: 2022/12/09 14:43:13 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,17 @@ int *get_array(s_swap *lst, int len)
     return (arr);
 }
 
-void    rotateA(s_swap *stackA)
+
+void    rotateB(s_swap *stackB)
 {
     s_swap  *list;
     int *arr;
     int len;
     int i = 0;
 
-    list = stackA;
-    len = list_size(stackA) - 1;
-    arr = get_array(stackA, len);
+    list = stackB;
+    len = list_size(stackB) - 1;
+    arr = get_array(stackB, len);
     while (list != NULL)
     {
         list -> data = arr[i];

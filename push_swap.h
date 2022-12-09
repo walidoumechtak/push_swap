@@ -21,6 +21,12 @@ void    delone(s_swap *list);
 void    swapA(s_swap *stackA);
 void    swapB(s_swap *stackB);
 void    swapAB(s_swap *stackA, s_swap *stackB);
+void    rotateA(s_swap *stackA);
+void    rotateB(s_swap *stackB);
+void    rotateAll(s_swap *stackA, s_swap *stackB);
+void    rra(s_swap *stackA);
+void    rrb(s_swap *stackB);
+void    rrAll(s_swap *stackA, s_swap *stackB)
 
 typedef struct  t_swap
 {
