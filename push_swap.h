@@ -13,8 +13,7 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdio.h>
-
+#include <stdio.h>
 
 int list_size(s_swap *ptr);
 void    add_back(s_swap *list, s_swap *new);

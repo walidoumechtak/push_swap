@@ -5,19 +5,50 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 09:09:25 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/09 09:09:25 by woumecht         ###   ########.fr       */
+/*   Created: 2022/12/09 12:53:53 by woumecht          #+#    #+#             */
+/*   Updated: 2022/12/09 12:53:53 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+#include <unistd.h>
+
+int *get_array(s_swap *lst, int len)
+{
+    int *arr;
+    int i;
+
+    i = 0;
+    arr = malloc(len * sizeof(int));
+    while (i < len)
+    {
+        arr[i] = lst -> data;
+        lst = lst -> next;
+        i++;
+    }
+    len -= 1;
+    while (len > 0)
+    {
+        arr[len] = arr[len - 1];
+        len--;
+    }
+    return (arr);
+}
 
 void    rotateA(s_swap *stackA)
 {
-    s_swap  *last;
+    s_swap  *list;
+    int *arr;
+    int len;
+    int i = 0;
 
-    while ()
+    list = stackA;
+    len = list_size(stackA) - 1;
+    arr = get_array(stackA, len);
+    while (list != NULL)
     {
-        
+        list -> data = arr[i];
+        list = list -> next;
     }
+
 }
