@@ -6,7 +6,7 @@
 /*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:49:36 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/08 19:49:36 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/12 16:10:05 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void    pushA(s_swap *stackA, s_swap *stackB)
     {
         while (stackB != NULL)
             stackB = stackB -> next;
-        add_back(stackA, stackB);
+        add_back(&stackA, stackB);
         delone(stackB);
     }
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/07 21:33:34 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/14 15:32:59 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,28 @@
 # define PUSH_SWAP_H
 
 #include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+typedef struct  t_swap
+{
+    int data;
+    struct t_swap *next;
+}               s_swap;
 
 int list_size(s_swap *ptr);
-void    add_back(s_swap *list, s_swap *new);
+void    add_back(s_swap **list, s_swap *new);
 void    delone(s_swap *list);
+void    lst_clear(s_swap **lst);
+s_swap  *lst_new(int content);
+void    add_fornt(s_swap **list, s_swap *new);
+
+size_t	ft_atoi(const char *str);
+// int	*get_array_numbers(char **av, int ac);
+int *get_array(s_swap *lst, int len);
+
+void    pushA(s_swap *stackA, s_swap *stackB);
+void    pushB(s_swap *stackA, s_swap *stackB);
 void    swapA(s_swap *stackA);
 void    swapB(s_swap *stackB);
 void    swapAB(s_swap *stackA, s_swap *stackB);
@@ -26,13 +44,14 @@ void    rotateB(s_swap *stackB);
 void    rotateAll(s_swap *stackA, s_swap *stackB);
 void    rra(s_swap *stackA);
 void    rrb(s_swap *stackB);
-void    rrAll(s_swap *stackA, s_swap *stackB)
+void    rrAll(s_swap *stackA, s_swap *stackB);
 
-typedef struct  t_swap
-{
-    int data;
-    s_swap *next;
-} s_swap;
+int isall_digit(char **av, int ac);
+int	isnot_repeated(char **av, int ac);
+int is_inputs_sorted(char **av, int ac);
+
+
+
 
 
 #endif

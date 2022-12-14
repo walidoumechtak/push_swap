@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swapB.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:38:32 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/08 19:38:32 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/14 17:16:47 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,14 @@ void    swapB(s_swap *stackB)
     int temp;
 
     len = list_size(stackB);
+     if (len == 2)
+    {
+        temp = stackB -> data;
+        stackB -> data = stackB -> next -> data;
+        stackB -> next -> data = temp;
+        printf("sb");
+        return ;
+    }
     if (len > 1)
     {
         while (stackB -> next != NULL)
@@ -26,4 +34,5 @@ void    swapB(s_swap *stackB)
         stackB -> data = stackB -> next -> data;
         stackB -> next -> data = temp;
     }
+    printf("sb");
 }

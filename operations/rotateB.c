@@ -6,33 +6,33 @@
 /*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:43:13 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/09 14:43:13 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/12 10:13:02 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int *get_array(s_swap *lst, int len)
-{
-    int *arr;
-    int i;
+// int *get_array(s_swap *lst, int len)
+// {
+//     int *arr;
+//     int i;
 
-    i = 0;
-    arr = malloc(len * sizeof(int));
-    while (i < len)
-    {
-        arr[i] = lst -> data;
-        lst = lst -> next;
-        i++;
-    }
-    len -= 1;
-    while (len > 0)
-    {
-        arr[len] = arr[len - 1];
-        len--;
-    }
-    return (arr);
-}
+//     i = 0;
+//     arr = malloc(len * sizeof(int));
+//     while (i < len)
+//     {
+//         arr[i] = lst -> data;
+//         lst = lst -> next;
+//         i++;
+//     }
+//     len -= 1;
+//     while (len > 0)
+//     {
+//         arr[len] = arr[len - 1];
+//         len--;
+//     }
+//     return (arr);
+// }
 
 
 void    rotateB(s_swap *stackB)

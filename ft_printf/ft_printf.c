@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 15:29:10 by woumecht          #+#    #+#             */
-/*   Updated: 2022/11/07 15:04:30 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/12 10:22:29 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,4 @@ int	ft_printf(const char *s, ...)
 	}
 	va_end(ptr);
 	return (cpp);
-}
-
-int main()
-{
-	printf("---%k---");
-
-	// getline();
 }

@@ -6,11 +6,11 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 21:42:52 by woumecht          #+#    #+#             */
-/*   Updated: 2022/10/29 10:26:33 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/13 12:05:12 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 #include <limits.h>
 
 static unsigned long	result_f(char *str, int i, int signe)
@@ -27,14 +27,14 @@ static unsigned long	result_f(char *str, int i, int signe)
 			return (0);
 		i++;
 	}
-	return ((int)result);
+	return (result);
 }
 
-int	ft_atoi(const char *str)
+size_t	ft_atoi(const char *str)
 {
 	int	i;
-	int	result;
-	int	signe;
+	size_t	result;
+	size_t	signe;
 
 	result = 0;
 	i = 0;

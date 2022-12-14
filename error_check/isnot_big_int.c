@@ -1,36 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   isnot_big_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 08:53:07 by woumecht          #+#    #+#             */
-/*   Updated: 2022/10/30 22:41:19 by woumecht         ###   ########.fr       */
+/*   Created: 2022/12/13 10:02:19 by woumecht          #+#    #+#             */
+/*   Updated: 2022/12/13 15:46:35 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+size_t	*get_arr_numbers(char **av, int ac)
 {
-	size_t	i;
-	size_t	j;
+	int		i;
+	size_t	*arr;
 
 	i = 0;
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	while (i < len && haystack[i])
+	arr = malloc(ac * sizeof(size_t));
+	while (ac > 0)
 	{
-		j = 0;
-		while (haystack[i + j] && haystack[i + j] == needle[j] && needle[j] && i
-			+ j < len)
+		arr[i] = ft_atoi(av[i + 1]);
+		i++;
+		ac--;
+	}
+	return (arr);
+}
+
+int	isnot_big_int(char **av, int ac)
+{
+	int		i;
+	size_t	*arr;
+
+	arr = get_arr_numbers(av, ac);
+	i = 0;
+	while (i < ac)
+	{
+		if (arr[i] > 2147483647)
 		{
-			j++;
-			if (needle[j] == '\0')
-				return ((char *)haystack + i);
+			free(arr);
+			return (0);
 		}
 		i++;
 	}
-	return (NULL);
+	free(arr);
+	return (1);
 }

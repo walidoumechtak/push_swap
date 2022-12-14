@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pushB.c                                            :+:      :+:    :+:   */
+/*   lst_new.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 08:55:39 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/12 16:10:10 by woumecht         ###   ########.fr       */
+/*   Created: 2022/12/12 13:28:33 by woumecht          #+#    #+#             */
+/*   Updated: 2022/12/12 13:32:42 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    pushB(s_swap *stackA, s_swap *stackB)
+s_swap  *lst_new(int content)
 {
-    int len;
+    s_swap  *new;
 
-    len = list_size(stackA);
-    if (len != 0)
-    {
-        while (stackA != NULL)
-            stackA = stackA -> next;
-        add_back(&stackB, stackA);
-        delone(stackA);
-    }
+    new = malloc(sizeof(s_swap));
+    new -> data = content;
+    new -> next = NULL;
+    return (new);
 }

@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pushB.c                                            :+:      :+:    :+:   */
+/*   is_all_digit.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 08:55:39 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/12 16:10:10 by woumecht         ###   ########.fr       */
+/*   Created: 2022/12/13 09:59:55 by woumecht          #+#    #+#             */
+/*   Updated: 2022/12/13 12:30:03 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    pushB(s_swap *stackA, s_swap *stackB)
+int	isall_digit(char **av, int ac)
 {
-    int len;
+	int i;
+	int j;
 
-    len = list_size(stackA);
-    if (len != 0)
-    {
-        while (stackA != NULL)
-            stackA = stackA -> next;
-        add_back(&stackB, stackA);
-        delone(stackA);
-    }
+	j = 0;
+	i = 0;
+	while (ac > 0)
+	{
+		while (av[i][j])
+		{
+			if (av[i][j] < '0' && av[i][j] > '9')
+				return (0);
+			j++;
+		}
+		i++;
+		ac--;
+	}
+	return (1);
 }

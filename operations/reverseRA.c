@@ -6,7 +6,7 @@
 /*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:58:52 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/09 14:58:52 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/12 10:10:41 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void    rra(s_swap *stackA)
 {
     int last;
-    int temp;
 
     last = stackA -> data;
     while (stackA -> next != NULL)

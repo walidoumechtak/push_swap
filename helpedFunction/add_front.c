@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pushB.c                                            :+:      :+:    :+:   */
+/*   add_front.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 08:55:39 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/12 16:10:10 by woumecht         ###   ########.fr       */
+/*   Created: 2022/12/13 15:08:10 by woumecht          #+#    #+#             */
+/*   Updated: 2022/12/13 15:28:51 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    pushB(s_swap *stackA, s_swap *stackB)
+void    add_fornt(s_swap **list, s_swap *new)
 {
-    int len;
-
-    len = list_size(stackA);
-    if (len != 0)
+    s_swap  *temp;
+    
+    if (!list || !new)
+        return ;
+    if (!*list)
     {
-        while (stackA != NULL)
-            stackA = stackA -> next;
-        add_back(&stackB, stackA);
-        delone(stackA);
+        *list = new;
+        return ;
     }
+    new -> next = *list;
+    *list = new;
 }

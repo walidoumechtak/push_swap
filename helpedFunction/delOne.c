@@ -6,7 +6,7 @@
 /*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:47:40 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/09 08:47:40 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/12 10:10:16 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void    delone(s_swap *list)
 {
     if (!list)
         return ;
-    free(list->data);
+    free(list);
 }
