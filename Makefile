@@ -34,3 +34,6 @@ fclean:
 	rm -f $(NAME) $(OBJ)
 
 re:fclean all
+
+git:
+	git add . && git commit -m "push swap" && git push
