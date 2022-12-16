@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/16 10:11:37 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/16 22:03:11 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void    rrAll(s_swap *stackA, s_swap *stackB);
 int isall_digit(char **av, int ac);
 int	isnot_repeated(char **av, int ac);
 int is_inputs_sorted(char **av, int ac);
+int the_big_num3(s_swap *list, int ac);
 
 
 

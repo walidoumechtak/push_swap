@@ -10,6 +10,7 @@ OBJ=push_swap.o \
 	helpedFunction/list_size.o \
 	helpedFunction/lst_new.o \
 	helpedFunction/lst_clear.o \
+	helpedFunction/the_big_num3.c \
 	operations/pushA.o \
 	operations/pushB.o \
 	operations/reverseRA.o \
