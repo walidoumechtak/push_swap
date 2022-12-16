@@ -11,6 +11,7 @@ OBJ=push_swap.o \
 	helpedFunction/lst_new.o \
 	helpedFunction/lst_clear.o \
 	helpedFunction/the_big_num3.c \
+	helpedFunction/the_small_num3.c \
 	operations/pushA.o \
 	operations/pushB.o \
 	operations/reverseRA.o \
