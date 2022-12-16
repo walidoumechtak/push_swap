@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 13:08:59 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/14 22:10:25 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/16 09:50:53 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 void	push_swap(s_swap *list, int ac)
 {
-	s_swap	*ptr;
-	
-	ptr = list;
 	if (ac == 3)
 	{
-		if ((ptr -> data) < (ptr -> next -> data))
+		if ((list -> data) < (list -> next -> data))
 			swapA(list);
 			//printf("swapA");
+	}
+	else if (ac == 4)
+	{
+		
 	}
 	
 }

@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/14 15:32:59 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/16 10:11:37 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void    delone(s_swap *list);
 void    lst_clear(s_swap **lst);
 s_swap  *lst_new(int content);
 void    add_fornt(s_swap **list, s_swap *new);
+s_swap  *get_last_lst(s_swap *lst);
 
 size_t	ft_atoi(const char *str);
 // int	*get_array_numbers(char **av, int ac);
