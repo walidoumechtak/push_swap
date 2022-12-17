@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 16:00:36 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 19:38:00 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ int isall_digit(char **av, int ac);
 int	isnot_repeated(char **av, int ac);
 int	isnot_big_int(char **av, int ac);
 int is_inputs_sorted(char **av, int ac);
-int the_big_num3(s_swap *list);
-int the_small_num3(s_swap *list);
+int the_big_num(s_swap *list);
+int the_small_num(s_swap *list);
 
 
 

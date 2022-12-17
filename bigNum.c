@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   smallNum3.c                                        :+:      :+:    :+:   */
+/*   bigNum3.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/17 08:23:56 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 17:59:15 by woumecht         ###   ########.fr       */
+/*   Created: 2022/12/17 08:24:43 by woumecht          #+#    #+#             */
+/*   Updated: 2022/12/17 19:36:18 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int the_small_num3(s_swap *list)
+int the_big_num(s_swap *list)
 {
     s_swap  *ptr;
-    int min_index;
+    int max_index;
     int i;
-    int min;
-
+    int max;
+    
     i = 1;
-    min = list -> data;
+    max = list -> data;
     list = list -> next;
     ptr = list;
-    min_index = 0;
+    max_index = 0;
     while (ptr != NULL)
     {
-        if (ptr -> data < min)
+        if (ptr -> data > max)
         {
-            min_index = i;
-            min = ptr -> data;
+            max_index = i;
+            max = ptr -> data;
         }
         ptr = ptr -> next;
         i++;
     }
-    return (min_index);
+    return (max_index);
 }

@@ -12,8 +12,8 @@ OBJ=push_swap.o \
 	helpedFunction/lst_new.o \
 	helpedFunction/lst_clear.o \
 	helpedFunction/get_last_lst.o \
-	bigNum3.o \
-	smallNum3.o \
+	bigNum.o \
+	smallNum.o \
 	operations/pushA.o \
 	operations/pushB.o \
 	operations/reverseRA.o \
