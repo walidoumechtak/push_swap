@@ -6,13 +6,13 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 10:00:56 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/13 11:26:43 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 14:38:28 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	*get_array_numbers(char **av, int ac)
+int	*get_array_numbers_sort(char **av, int ac)
 {
 	int	i;
 	int	*arr;
@@ -34,7 +34,7 @@ int	isnot_repeated(char **av, int ac)
 	int	i;
 	int	j;
 
-	arr = get_array_numbers(av, ac);
+	arr = get_array_numbers_sort(av, ac);
 	i = 0;
 	while (i < ac)
 	{

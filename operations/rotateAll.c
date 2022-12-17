@@ -6,14 +6,14 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:45:30 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 10:39:19 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 15:58:17 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rotateAll(s_swap *stackA, s_swap *stackB)
+void    rotateAll(s_swap **stackA, s_swap **stackB)
 {
-    rotateA(&stackA);
+    rotateA(stackA);
     rotateB(stackB);
 }

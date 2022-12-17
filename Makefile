@@ -5,6 +5,7 @@ NAME=push_swap
 OBJ=push_swap.o \
 	is_inputs_sorted.o \
 	helpedFunction/add_back.o \
+	helpedFunction/add_front.o \
 	helpedFunction/delOne.o \
 	helpedFunction/ft_atoi.o \
 	helpedFunction/list_size.o \
@@ -24,6 +25,9 @@ OBJ=push_swap.o \
 	operations/swapA.o \
 	operations/swapB.o \
 	operations/swapAB.o \
+	error_check/is_all_digit.o \
+	error_check/is_not_repeated.o \
+	error_check/isnot_big_int.o \
 	
 all : $(NAME)
 

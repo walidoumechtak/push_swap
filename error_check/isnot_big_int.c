@@ -6,13 +6,13 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 10:02:19 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/13 15:46:35 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 14:37:53 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-size_t	*get_arr_numbers(char **av, int ac)
+size_t	*get_arr_numbers_big(char **av, int ac)
 {
 	int		i;
 	size_t	*arr;
@@ -33,7 +33,7 @@ int	isnot_big_int(char **av, int ac)
 	int		i;
 	size_t	*arr;
 
-	arr = get_arr_numbers(av, ac);
+	arr = get_arr_numbers_big(av, ac);
 	i = 0;
 	while (i < ac)
 	{

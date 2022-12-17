@@ -3,24 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   reverseRB.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 17:21:26 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/09 17:21:26 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 15:55:37 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rrb(s_swap *stackB)
+void    rrb(s_swap **stackB)
 {
-    int last;
+    s_swap  *list;
+    int *arr;
+    int len;
+    int i = 0;
 
-    last = stackB -> data;
-    while (stackB -> next != NULL)
+    list = *stackB;
+    len = list_size(*stackB) - 1;
+    arr = get_array(*stackB, len);
+    while (list != NULL)
     {
-        stackB -> data = stackB -> next -> data;
-        stackB = stackB -> next;
+        list -> data = arr[i];
+        list = list -> next;
     }
-    stackB -> next -> data = last;
+    free(arr);
 }

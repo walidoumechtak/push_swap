@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 08:24:43 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 08:30:49 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 17:58:39 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ int the_big_num3(s_swap *list)
     int i;
     int max;
     
-    i = 2;
+    i = 1;
     max = list -> data;
     list = list -> next;
     ptr = list;
-    max_index = 2;
-    while (ptr != NULL && i--)
+    max_index = 0;
+    while (ptr != NULL)
     {
         if (ptr -> data > max)
         {
@@ -32,6 +32,7 @@ int the_big_num3(s_swap *list)
             max = ptr -> data;
         }
         ptr = ptr -> next;
+        i++;
     }
     return (max_index);
 }

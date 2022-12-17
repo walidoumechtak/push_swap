@@ -3,25 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   pushB.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:55:39 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/12 16:10:10 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 15:54:06 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    pushB(s_swap *stackA, s_swap *stackB)
+void    pushB(s_swap **stackA, s_swap **stackB)
 {
     int len;
 
-    len = list_size(stackA);
+    len = list_size(*stackA);
     if (len != 0)
     {
-        while (stackA != NULL)
-            stackA = stackA -> next;
-        add_back(&stackB, stackA);
-        delone(stackA);
+        add_back(stackB, *stackA);
+        delone(*stackA);
     }
 }

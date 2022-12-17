@@ -6,53 +6,24 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 12:53:53 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 13:16:35 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 15:57:05 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int *get_array(s_swap *lst, int len)
+void    rotateA(s_swap **stackA)     
 {
-    int *arr;
-    int temp;
-    int i;
+    s_swap  *ptr;
+    int last;
 
-    i = 0;
-    arr = malloc(len * sizeof(int));
-    while (i <= len)
+    ptr = *stackA;
+    last = ptr -> data;
+    while (ptr -> next != NULL)
     {
-        arr[i] = lst -> data;
-        lst = lst -> next;
-        i++;
+        ptr -> data = ptr -> next -> data;
+        ptr = ptr -> next;
     }
-    temp = arr[len];
-    while (len > 0)
-    {
-        arr[len] = arr[len - 1];
-        len--;
-    }
-    arr[0] = temp;
-    return (arr);
-}
-
-void    rotateA(s_swap **stackA)
-{
-    s_swap  *list;
-    int *arr;
-    int len;
-    int i;
-
-    i = 0;
-    list = *stackA;
-    len = list_size(list) - 1;
-    arr = get_array(list, len);
-    while (list != NULL)
-    {
-        list -> data = arr[i];
-        list = list -> next;
-        i++;
-    }
-    printf("ra\n");
-    free(arr);
+    ptr -> data = last;
+    printf("rra\n");
 }

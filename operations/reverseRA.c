@@ -6,22 +6,53 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:58:52 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 09:45:04 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 15:55:06 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rra(s_swap *stackA)     
+int *get_array(s_swap *lst, int len)
 {
-    int last;
+    int *arr;
+    int temp;
+    int i;
 
-    last = stackA -> data;
-    while (stackA -> next != NULL)
+    i = 0;
+    arr = malloc(len * sizeof(int));
+    while (i <= len)
     {
-        stackA -> data = stackA -> next -> data;
-        stackA = stackA -> next;
+        arr[i] = lst -> data;
+        lst = lst -> next;
+        i++;
     }
-    stackA -> data = last;
-    printf("rra\n");
+    temp = arr[len];
+    while (len > 0)
+    {
+        arr[len] = arr[len - 1];
+        len--;
+    }
+    arr[0] = temp;
+    return (arr);
+}
+
+void    rra(s_swap **stackA)
+{
+    s_swap  *list;
+    int *arr;
+    int len;
+    int i;
+
+    i = 0;
+    list = *stackA;
+    len = list_size(list) - 1;
+    arr = get_array(list, len);
+    while (list != NULL)
+    {
+        list -> data = arr[i];
+        list = list -> next;
+        i++;
+    }
+    printf("ra\n");
+    free(arr);
 }

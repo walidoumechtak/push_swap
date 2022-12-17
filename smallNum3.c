@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 08:23:56 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 08:27:52 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 17:59:15 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ int the_small_num3(s_swap *list)
     int i;
     int min;
 
-    i = 2;
+    i = 1;
     min = list -> data;
     list = list -> next;
     ptr = list;
-    min_index = 2;
-    while (list != NULL && i--)
+    min_index = 0;
+    while (ptr != NULL)
     {
         if (ptr -> data < min)
         {
@@ -32,6 +32,7 @@ int the_small_num3(s_swap *list)
             min = ptr -> data;
         }
         ptr = ptr -> next;
+        i++;
     }
     return (min_index);
 }
