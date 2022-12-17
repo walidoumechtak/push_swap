@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   reverseRA.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:58:52 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/12 10:10:41 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 09:45:04 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rra(s_swap *stackA)
+void    rra(s_swap *stackA)     
 {
     int last;
 
@@ -22,5 +22,6 @@ void    rra(s_swap *stackA)
         stackA -> data = stackA -> next -> data;
         stackA = stackA -> next;
     }
-    stackA -> next -> data = last;
+    stackA -> data = last;
+    printf("rra\n");
 }

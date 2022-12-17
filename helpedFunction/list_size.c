@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_size.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:29:08 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/08 19:29:08 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 09:38:49 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int list_size(s_swap *ptr)
     int i;
 
     i = 0;
+    if (!ptr)
+        return (0);
     while (ptr != NULL)
     {
         i++;

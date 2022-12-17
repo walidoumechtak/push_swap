@@ -10,8 +10,9 @@ OBJ=push_swap.o \
 	helpedFunction/list_size.o \
 	helpedFunction/lst_new.o \
 	helpedFunction/lst_clear.o \
-	helpedFunction/the_big_num3.c \
-	helpedFunction/the_small_num3.c \
+	helpedFunction/get_last_lst.o \
+	bigNum3.o \
+	smallNum3.o \
 	operations/pushA.o \
 	operations/pushB.o \
 	operations/reverseRA.o \

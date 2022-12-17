@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotateAll.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:45:30 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/09 14:45:30 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 10:39:19 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void    rotateAll(s_swap *stackA, s_swap *stackB)
 {
-    rotateA(stackA);
+    rotateA(&stackA);
     rotateB(stackB);
 }

@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/16 22:16:01 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 10:38:45 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ int *get_array(s_swap *lst, int len);
 
 void    pushA(s_swap *stackA, s_swap *stackB);
 void    pushB(s_swap *stackA, s_swap *stackB);
-void    swapA(s_swap *stackA);
+void    swapA(s_swap **stackA);
 void    swapB(s_swap *stackB);
 void    swapAB(s_swap *stackA, s_swap *stackB);
-void    rotateA(s_swap *stackA);
+void    rotateA(s_swap **stackA);
 void    rotateB(s_swap *stackB);
 void    rotateAll(s_swap *stackA, s_swap *stackB);
 void    rra(s_swap *stackA);
@@ -50,8 +50,8 @@ void    rrAll(s_swap *stackA, s_swap *stackB);
 int isall_digit(char **av, int ac);
 int	isnot_repeated(char **av, int ac);
 int is_inputs_sorted(char **av, int ac);
-int the_big_num3(s_swap *list, int ac);
-int the_small_num3(s_swap *list, int ac);
+int the_big_num3(s_swap *list);
+int the_small_num3(s_swap *list);
 
 
 

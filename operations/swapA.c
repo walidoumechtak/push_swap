@@ -6,33 +6,37 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 10:15:46 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/14 17:14:56 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/17 09:50:04 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    swapA(s_swap *stackA)
+void    swapA(s_swap **stackA)
 {
+    s_swap  *ptr;
+    s_swap  *last;
     int len;
     int temp;
 
-    len = list_size(stackA);
+    ptr = *stackA;
+    len = list_size(ptr);
+    last = get_last_lst(ptr);
     if (len == 2)
     {
-        temp = stackA -> data;
-        stackA -> data = stackA -> next -> data;
-        stackA -> next -> data = temp;
+        temp = ptr -> data;
+        ptr -> data = ptr -> next -> data;
+        ptr -> next -> data = temp;
         printf("sa\n");
         return ;
     }
-    if (len > 1)
+    else if (len > 2)
     {
-        while (stackA -> next != NULL)
-            stackA = stackA -> next;
-        temp = stackA -> data;
-        stackA -> data = stackA -> next -> data;
-        stackA -> next -> data = temp;
+        while (ptr -> next -> next != NULL)
+            ptr = ptr -> next;
+        temp = ptr -> data;
+        ptr -> data = last -> data;
+        last -> data = temp;
+        printf("sa\n");
     }
-    printf("sa\n");
 }
