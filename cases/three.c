@@ -6,13 +6,13 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 15:53:07 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/19 15:53:18 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/19 15:55:46 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	push_3_swap(s_swap *list, int ac)
+void	three(s_swap *list, int ac)
 {
 	s_swap *ptr;
 

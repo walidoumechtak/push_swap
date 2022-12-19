@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/18 15:58:39 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/19 15:55:57 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int the_big_num(s_swap *list);
 int the_small_num(s_swap *list);
 
 void    s_five(s_swap **list);
+void	three(s_swap *list, int ac);
 
 
 
