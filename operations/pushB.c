@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:55:39 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 15:54:06 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/19 15:51:17 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void    pushB(s_swap **stackA, s_swap **stackB)
     len = list_size(*stackA);
     if (len != 0)
     {
-        add_back(stackB, *stackA);
+        add_fornt(stackB, *stackA);
         delone(*stackA);
     }
 }

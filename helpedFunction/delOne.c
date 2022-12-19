@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:47:40 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 15:23:14 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/19 12:54:55 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 void    delone(s_swap *list)
 {
-    s_swap  *ptr;
     if (!list)
         return ;
-    ptr = list -> next;
     free(list);
-    list = ptr;
 }

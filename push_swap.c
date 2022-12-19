@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 13:08:59 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 19:37:11 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/18 15:55:51 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ void	push_swap(s_swap *list, int ac)
 	}
 	else if (ac == 4)
 		push_3_swap(list, ac);
+	else if (ac == 6)
+		s_five(&list);
 }
 
 int	main(int ac, char **av)

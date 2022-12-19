@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 19:38:00 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/18 15:58:39 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int is_inputs_sorted(char **av, int ac);
 int the_big_num(s_swap *list);
 int the_small_num(s_swap *list);
 
-
+void    s_five(s_swap **list);
 
 
 

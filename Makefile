@@ -28,6 +28,7 @@ OBJ=push_swap.o \
 	error_check/is_all_digit.o \
 	error_check/is_not_repeated.o \
 	error_check/isnot_big_int.o \
+	cases/five.o
 	
 all : $(NAME)
 
