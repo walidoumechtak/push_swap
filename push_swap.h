@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/19 15:55:57 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/21 11:44:10 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct  t_swap
 
 int list_size(s_swap *ptr);
 void    add_back(s_swap **list, s_swap *new);
-void    delone(s_swap *list);
+void    delone(s_swap **list);
 void    lst_clear(s_swap **lst);
 s_swap  *lst_new(int content);
 void    add_fornt(s_swap **list, s_swap *new);
@@ -54,7 +54,7 @@ int is_inputs_sorted(char **av, int ac);
 int the_big_num(s_swap *list);
 int the_small_num(s_swap *list);
 
-void    s_five(s_swap **list);
+void    s_five(s_swap **list, s_swap **stackB);
 void	three(s_swap *list, int ac);
 
 

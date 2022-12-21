@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 11:11:31 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/19 15:49:59 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/22 00:44:25 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,48 +31,40 @@ void    s_five_cases(s_swap **list, s_swap **stackB)
         {
             if (the_small_num(*list) == 0)
                 pushB(list, stackB);
-            // else if (the_small_num(*list) == 1)
-            // {
-            //     swapA(list);
-            //     pushB(list, stackB);
-            // }
+            else if (the_small_num(*list) == 1)
+            {
+                swapA(list);
+                pushB(list, stackB);
+            }
         }
-        // else if (the_small_num(*list) > 2)
-        // {
-        //     if (the_small_num(*list) == 3)
-        //         rrpB(list, stackB, 3);
-        //     else if (the_small_num(*list) == 4)
-        //         rrpB(list, stackB, 4);
-        // }
-        // else
-        // {
-        //     rotateA(list);
-        //     rotateA(list);
-        //     pushB(list, stackB);
-        // }
+        else if (the_small_num(*list) > 2)
+        {
+            if (the_small_num(*list) == 3)
+                rrpB(list, stackB, 3);
+            else if (the_small_num(*list) == 4)
+                rrpB(list, stackB, 4);
+        }
+        else
+        {
+            rotateA(list);
+            rotateA(list);
+            pushB(list, stackB);
+        }
         i--;     
     }
 }
 
-void    s_five(s_swap **list)
+void    s_five(s_swap **list, s_swap **stackB)
 {
-    s_swap  *stackB;
     s_swap  *ptr;
     int i;
 
-    i = 5;
-    // stackB = lst_new(0);
-    stackB = NULL;
     ptr = *list;
-    s_five_cases(list, &stackB);
-    while (ptr != NULL)
+    i = 5;
+    s_five_cases(list, stackB);
+    while (i > 0)
     {
-        printf("%d", ptr -> data);
-        ptr = ptr -> next;
+        pushA(list, stackB);
+        i--;
     }
-    // while (i > 0)
-    // {
-    //     pushA(list, &stackB);
-    //     i--;
-    // }
 }
