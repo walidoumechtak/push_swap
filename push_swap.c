@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 13:08:59 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/22 01:48:03 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/23 10:47:19 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ int	main(int ac, char **av)
 {
 	s_swap	*stackB;
 	
-	// stackB = 0;
-	stackB = lst_new(0);
+	stackB = NULL;
 	if (ac > 1)
 	{
 		s_swap *head;
@@ -50,12 +49,12 @@ int	main(int ac, char **av)
 			|| !isnot_repeated(av, ac - 1 || !isnot_big_int(av, ac - 1)))
 			return (0);
 		push_swap(&head, ac, &stackB);
-		// while ((ac - 1) > 0)
-		// {
-		// 	printf("%d", head->data);
-		// 	head = head->next;
-		// 	ac--;
-		// }
+		while ((ac - 1) > 0)
+		{
+			printf("%d", head->data);
+			head = head->next;
+			ac--;
+		}
 		
 	}
 	return (0);
