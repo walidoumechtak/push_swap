@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 17:24:39 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 16:00:22 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/23 15:30:08 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@ void    rrAll(s_swap **stackA, s_swap **stackB)
 {
     rra(stackA);
     rrb(stackB);
+    printf("rrr");
 }

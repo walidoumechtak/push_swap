@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:38:32 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 15:49:11 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/23 15:32:36 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	swapB(s_swap *stackB)
 	temp = ptr->data;
 	ptr->data = ptr->next->data;
 	ptr->next->data = temp;
-	printf("sa\n");
+	printf("sb\n");
 }

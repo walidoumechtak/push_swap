@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:58:52 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/22 00:25:04 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/23 15:29:12 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,6 @@ void    rra(s_swap **stackA)
         list = list -> next;
         i++;
     }
-    printf("raa\n");
+    printf("rra\n");
     free(arr);
 }

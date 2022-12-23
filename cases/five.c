@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 11:11:31 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/23 11:00:30 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/23 14:58:32 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,19 @@ void    rrpB2(s_swap **list, s_swap **stackB)
     pushB(list,stackB);
 }
 
+void    rpb(s_swap **list, s_swap **stackB)
+{
+    rotateA(list);
+    rotateA(list);
+    pushB(list, stackB);
+}
+
 void    s_five_cases(s_swap **list, s_swap **stackB)
 {
     int i;
 
     i = 4;
-    while (i > 0)
+    while (i-- > 0)
     {
         if (the_small_num(*list) < 2)
         {
@@ -50,12 +57,7 @@ void    s_five_cases(s_swap **list, s_swap **stackB)
                 rrpB1(list, stackB);
         }
         else
-        {
-            rotateA(list);
-            rotateA(list);
-            pushB(list, stackB);
-        }
-        i--;     
+            rpb(list, stackB);  
     }
 }
 

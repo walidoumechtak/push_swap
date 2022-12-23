@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 17:21:26 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 15:55:37 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/23 15:29:29 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ void    rrb(s_swap **stackB)
         list = list -> next;
     }
     free(arr);
+    printf("rrb");
 }
