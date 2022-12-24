@@ -34,7 +34,7 @@ OBJ=push_swap.o \
 all : $(NAME)
 
 $(NAME):$(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^ -fsanitize=address
+	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
 	rm -f $(OBJ)
