@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 13:08:59 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/23 15:56:03 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/24 11:06:20 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int	main(int ac, char **av)
 		if (is_inputs_sorted(av, ac - 1) || !isall_digit(av, ac - 1)
 			|| !isnot_repeated(av, ac - 1) || !isnot_big_int(av, ac - 1))
 			return (0);
+		
 		push_swap(&head, ac, &stackB);
 		while ((ac - 1) > 0)
 		{

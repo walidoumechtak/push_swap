@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:55:39 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/23 10:46:16 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/24 10:39:05 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	pushB(s_swap **stackA, s_swap **stackB)
 			*stackB = lst_new((*stackA)->data);
 			ptr = (*stackA) -> next;
 			*stackA = ptr;
+			printf("pb\n");
 			return ;
 		}
 		ptr = (*stackA) -> next;
