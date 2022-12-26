@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/24 21:18:39 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/26 15:06:14 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,11 @@ int	isnot_big_int(char **av, int ac);
 int is_inputs_sorted(char **av, int ac);
 int the_big_num(s_swap *list);
 int the_small_num(s_swap *list);
+int	*get_sorted_array(s_swap *stackA, int len);
 
 void    s_five(s_swap **list, s_swap **stackB, int ac);
 void	three(s_swap *list, int ac);
+void	big_stack(s_swap **stackA, s_swap **stackB, int nm);
 
 
 

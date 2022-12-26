@@ -14,6 +14,7 @@ OBJ=push_swap.o \
 	helpedFunction/get_last_lst.o \
 	helpedFunction/bigNum.o \
 	helpedFunction/smallNum.o \
+	helpedFunction/get_sorted_array.o \
 	operations/pushA.o \
 	operations/pushB.o \
 	operations/reverseRA.o \
@@ -30,6 +31,7 @@ OBJ=push_swap.o \
 	error_check/isnot_big_int.o \
 	cases/five.o \
 	cases/three.o \
+	cases/big_stack.o \
 	
 all : $(NAME)
 

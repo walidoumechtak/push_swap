@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:55:39 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/24 10:39:05 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/25 22:07:19 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	pushB(s_swap **stackA, s_swap **stackB)
 		}
 		ptr = (*stackA) -> next;
 		add_fornt(stackB, *stackA);
+		// free(*stackA);
 		*stackA = ptr;
 	}
 	printf("pb\n");
