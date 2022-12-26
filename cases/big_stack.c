@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:59:42 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/26 17:02:55 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/26 18:49:58 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	big_stack(s_swap **stackA, s_swap **stackB, int nm)
     int end;
     int *arr;
     int first_num;
-    int second_num;
+    int moves;
 
     ptr = *stackA;
 	stack_size = list_size(*stackA);
@@ -49,7 +49,11 @@ void	big_stack(s_swap **stackA, s_swap **stackB, int nm)
         if (nb_in_chunck(arr, start, end, ptr->data))
         {
             first_num = ptr->data;
-            
+            moves = index_from_stack(*stackA, first_num);
+            while (moves > 0 && index_from_stack(*stackA, first_num) > stack_size / 2)
+                rotateA(stackA);
+            else if (moves > 0 && index_from_stack(*stackA, first_num) <= stack_size / 2)
+                
         }
         ptr = ptr-> next;
     }
