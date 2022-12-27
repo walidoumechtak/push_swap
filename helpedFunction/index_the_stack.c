@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotateA.c                                          :+:      :+:    :+:   */
+/*   index_the_stack.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 12:53:53 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/27 21:05:57 by woumecht         ###   ########.fr       */
+/*   Created: 2022/12/27 12:58:53 by woumecht          #+#    #+#             */
+/*   Updated: 2022/12/27 15:30:59 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rotateA(s_swap **stackA)     
+void    index_the_stack(s_swap *stack)
 {
     s_swap  *ptr;
-    int last;
-    
-    ptr = *stackA;
-    last = ptr -> data;
-    while (ptr -> next != NULL)
+    int *arr;
+    int i;
+    int temp;
+    int len;
+
+    arr = get_sorted_array(stack, list_size(stack));
+    temp = the_small_num(stack);
+    ptr = stack;
+    while (stack != NULL)
     {
-        ptr -> data = ptr -> next -> data;
-        ptr = ptr -> next;
+        i = 0;
+        len = list_size(ptr);
+        while (len > 0)
+        {
+            if (stack-> data == arr[i])
+                stack->index = i;
+            len--;
+            i++;
+        }
+        stack = stack -> next;
     }
-    ptr -> data = last;
-    printf("ra\n");
 }

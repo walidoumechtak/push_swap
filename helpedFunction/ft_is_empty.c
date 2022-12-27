@@ -1,29 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotateA.c                                          :+:      :+:    :+:   */
+/*   ft_is_empty.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 12:53:53 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/27 21:05:57 by woumecht         ###   ########.fr       */
+/*   Created: 2022/12/27 15:45:26 by woumecht          #+#    #+#             */
+/*   Updated: 2022/12/27 15:46:36 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rotateA(s_swap **stackA)     
+int ft_is_empty(s_swap *stack)
 {
-    s_swap  *ptr;
-    int last;
-    
-    ptr = *stackA;
-    last = ptr -> data;
-    while (ptr -> next != NULL)
-    {
-        ptr -> data = ptr -> next -> data;
-        ptr = ptr -> next;
-    }
-    ptr -> data = last;
-    printf("ra\n");
 }
