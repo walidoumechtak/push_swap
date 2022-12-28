@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:59:42 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/27 21:20:26 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/28 15:58:23 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
 	int		cpt;
 	int		start;
 	int		end;
+	int	index;
+	stackB = NULL;
 
 	cpt = 0;
 	size_stack = list_size(*stackA);
@@ -41,24 +43,61 @@ void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
 	ptr = *stackA;
 	start = 0;
 	end = size_chunk;
+	// printf("stack : %d\n",size_stack);
+	// printf("chunck : %d\n",size_chunk);
+	// printf("chunck / 2 : %d\n",size_chunk/2);
+	// printf("index : %d\n",ptr -> data);
+	// rra(stackA);
+	// printf("-------- \n");
+	// printf("stack : %d\n",size_stack);
+	// printf("chunck : %d\n",size_chunk);
+	// printf("chunck / 2 : %d\n",size_chunk/2);
+	// printf("index : %d\n",(*stackA) -> index);
 	while ((*stackA) != NULL)
 	{
-		if ((*stackA)->index < size_chunk && ((*stackA)->index < size_chunk / 2)
-			&& (*stackA)->index > start)
+		index = index_from_stack(*stackA, (*stackA)->index);
+		if ((*stackA)->index < size_chunk)
+		//  && ((*stackA)->index < size_chunk / 2))
+			// && (*stackA)->index > start)
 		{
+				if (index < size_stack / 2)
+				{
+					while (index-- > 0)
+						rotateA(stackA);
+				}
+				else
+				{
+					while (index++ < size_stack)
+						rra(stackA);
+				}
+			
 			pushB(stackA, stackB);
 			cpt++;
 		}
-		else if ((*stackA)->index < size_chunk
-				&& ((*stackA)->index >= size_chunk / 2)
-				&& (*stackA)->index > start)
+		else if ((*stackA)->index < size_chunk)
+				// && ((*stackA)->index >= size_chunk / 2))
+				// && (*stackA)->index > start)
 		{
+			if (index < size_stack / 2)
+				{
+					while (index-- > 0)
+						rotateA(stackA);
+				}
+				else
+				{
+					while (index++ < size_stack)
+						rra(stackA);
+				}
 			pushB(stackA, stackB);
 			cpt++;
 			rotateB(stackB);
 		}
 		else
-			rra(stackA);
+		{
+			printf("%d\n", (*stackA)->data);
+			rotateA(stackA);
+			printf("%d\n", (*stackA)->data);
+		}
 		if (cpt == size_chunk)
 		{
 			size_chunk *= 2;
@@ -67,12 +106,13 @@ void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
 	}
 }
 
+
 void	big_stack(s_swap **stackA, s_swap **stackB, int nm)
 {
     push_to_b(stackA, stackB, nm);
-    while ((*stackB) != NULL)
-    {
-        printf("%d", (*stackB)->data);
-        (*stackB) = (*stackB)->next;
-    }
+    // while ((*stackB) != NULL)
+    // {
+    //     printf("%d", (*stackB)->data);
+    //     (*stackB) = (*stackB)->next;
+    // }
 }

@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 17:48:07 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/26 17:50:17 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/28 11:42:42 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int index_from_stack(s_swap *stack, int nb)
     i = 0;
     while (stack != NULL)
     {
-        if (nb == stack->data)
+        if (nb == stack->index)
             return (i);
         i++;
     }

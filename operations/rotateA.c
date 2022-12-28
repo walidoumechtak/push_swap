@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 12:53:53 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/27 21:05:57 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/28 18:42:39 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 void    rotateA(s_swap **stackA)     
 {
     s_swap  *ptr;
-    int last;
-    
-    ptr = *stackA;
-    last = ptr -> data;
-    while (ptr -> next != NULL)
+    s_swap  *last;
+    int len;
+
+    len = list_size(*stackA);
+    if (len > 1)
     {
-        ptr -> data = ptr -> next -> data;
-        ptr = ptr -> next;
+        last = get_last_lst(*stackA);
+        ptr = *stackA;
+        *stackA = (*stackA) -> next;
+        ptr -> next = NULL;    
+        last -> next = ptr;
+        printf("ra\n");
     }
-    ptr -> data = last;
-    printf("ra\n");
 }
