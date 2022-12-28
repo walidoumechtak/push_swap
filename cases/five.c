@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 11:11:31 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/24 21:41:59 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/28 21:09:26 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void    s_five_cases(s_swap **list, s_swap **stackB)
         if (len == 3)
             break ;   
     }
-    three(*list, 4);  
+    three(list, 4);  
 }
 
 void    s_five(s_swap **list, s_swap **stackB, int ac)

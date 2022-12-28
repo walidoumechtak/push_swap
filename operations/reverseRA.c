@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:58:52 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/28 18:44:25 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/28 21:07:53 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,16 @@ void    rra(s_swap **stackA)
     // }
     // free(arr);
     s_swap  *last;
-    s_swap  *ptr1;
     s_swap  *ptr2;
 
-    last = get_last_lst(*stackA);
-    ptr1 = *stackA;
     ptr2 = *stackA;
+    last = *stackA;
+    while (last->next != NULL)
+        last = last->next;
     while (ptr2->next->next != NULL)
         ptr2 = ptr2->next;
     ptr2->next = NULL;
-    last->next = ptr1;
+    last->next = *stackA;
     *stackA = last;
     printf("rra\n");
 }
