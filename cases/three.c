@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 15:53:07 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/28 21:06:51 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/31 15:37:39 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,5 @@ void	three(s_swap **list, int ac)
 		}
 		else if (the_small_num(*list) == 1 && the_big_num(*list) == 0)
 			rotateA(list);
-		// if (the_small_num(list) == 0 && the_big_num(list) == 1)
-		// {
-		// 	rra(&ptr);
-		// 	swapA(&ptr);
-		// }
-		// else if (the_small_num(list) == 1 && the_big_num(list) == 2)
-		// 	swapA(&list);
-		// else if (the_small_num(list) == 2 && the_big_num(list) == 1)
-		// 	rra(&list);
-		// else if (the_small_num(list) == 2 && the_big_num(list) == 0)
-		// {
-		// 	swapA(&list);
-		// 	rra(&list);
-		// }
-		// else if (the_small_num(list) == 1 && the_big_num(list) == 0)
-		// 	rotateA(&list);
 	}
 }

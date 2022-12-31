@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 17:21:26 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/31 14:18:33 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/31 15:41:23 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,6 @@
 
 void    rrb(s_swap **stackB)
 {
-    // s_swap  *list;
-    // int *arr;
-    // int len;
-    // int i = 0;
-
-    // list = *stackB;
-    // len = list_size(*stackB) - 1;
-    // arr = get_array(*stackB, len);
-    // while (list != NULL)
-    // {
-    //     list -> data = arr[i];
-    //     list = list -> next;
-    // }
-    // free(arr);
-    // printf("rrb");
-
     int len;
     s_swap  *last;
     s_swap  *ptr1;
