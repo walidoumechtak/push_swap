@@ -17,6 +17,7 @@ OBJ=push_swap.o \
 	helpedFunction/get_sorted_array.o \
 	helpedFunction/index_from_stack.o \
 	helpedFunction/index_the_stack.o \
+	helpedFunction/ft_putstr.o \
 	operations/pushA.o \
 	operations/pushB.o \
 	operations/reverseRA.o \
@@ -38,7 +39,7 @@ OBJ=push_swap.o \
 all : $(NAME)
 
 $(NAME):$(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^ -fsanitize=address
+	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
 	rm -f $(OBJ)
