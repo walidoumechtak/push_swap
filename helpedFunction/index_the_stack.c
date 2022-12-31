@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 12:58:53 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/27 15:30:59 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/30 18:35:58 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ void    index_the_stack(s_swap *stack)
         }
         stack = stack -> next;
     }
+    free(arr);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   add_back.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <woumecht@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:52:02 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/12 16:14:16 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/29 17:25:20 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void    add_back(s_swap **list, s_swap *new)
     p = *list;
     if (!list || !new)
         return ;
-    if (!*list)
-    {
-        *list = new;
-        return ;
-    }
-    while (p -> next != NULL)
-        p = p -> next;
-    p -> next = new;
+    // if (!*list)
+    // {
+    //     *list = new;
+    //     return ;
+    // }
+    while ((p) -> next != NULL)
+        (p) = (p) -> next;
+    (p) -> next = new;
 }

@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:59:42 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/28 21:31:13 by woumecht         ###   ########.fr       */
+/*   Updated: 2022/12/31 14:20:02 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,84 +26,98 @@ int	nb_in_chunck(int *arr, int end, int nb)
 	return (0);
 }
 
-void	ft_role(s_swap **stackA,int size_stack)
-{
-	int	index;
-	
-	index = index_from_stack(*stackA, (*stackA)->index);
-	if (index < size_stack / 2)
-	{
-		while (index-- > 0)
-			rotateA(stackA);
-	}
-	else
-	{
-		while (index++ < size_stack)
-			rra(stackA);
-	}
-}
 
 void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
 {
-	s_swap	*ptr;
+	s_swap *ptr;
 	int		size_stack;
 	int		size_chunk;
 	int		cpt;
-	int		start;
-	int		end;
-	stackB = NULL;
+	int		size;
 
 	cpt = 0;
-	size_stack = list_size(*stackA);
-	size_chunk = size_stack / n;
 	ptr = *stackA;
-	start = 0;
-	end = size_chunk;
-	// printf("stack : %d\n",size_stack);
-	// printf("chunck : %d\n",size_chunk);
-	// printf("chunck / 2 : %d\n",size_chunk/2);
-	// printf("index : %d\n",ptr -> data);
-	// rra(stackA);
-	// printf("-------- \n");
-	// printf("stack : %d\n",size_stack);
-	// printf("chunck : %d\n",size_chunk);
-	// printf("chunck / 2 : %d\n",size_chunk/2);
-	// printf("index : %d\n",(*stackA) -> index);
-
-
+	size_stack = list_size(ptr);
+	size_chunk = size_stack / n;
+	size = 1;
 
 	while ((*stackA) != NULL)
 	{
-		if ((*stackA)->index < size_chunk
-		 && ((*stackA)->index < size_chunk / 2))
-			// && (*stackA)->index > start)
+		if (((*stackA)->index < size_chunk * size))
 		{
-				
-			ft_role(stackA, size_stack);
 			pushB(stackA, stackB);
 			cpt++;
+			if ((*stackB)->index >= ((size_chunk * size)) - (size_chunk / 2))
+				rotateB(stackB);
 		}
-		else if ((*stackA)->index < size_chunk
-				&& ((*stackA)->index >= size_chunk / 2))
-				// && (*stackA)->index > start)
+		else
+			rotateA(stackA);
+		
+		if (cpt == size_chunk * size)
+			size++;
+	}
+}
+
+//======================================================================================
+
+int bige(s_swap *list)
+{
+    s_swap  *ptr;
+    int max;
+    
+    max = list -> data;
+    list = list -> next;
+    ptr = list;
+    while (ptr != NULL)
+    {
+        if (ptr -> data > max)
+            max = ptr -> data;
+        ptr = ptr -> next;
+    }
+    return (max);
+}
+
+
+void	ft_role(s_swap **stackB,int size_stack, int bigE)
+{
+	int	index;
+	
+	// s_swap **ptr;
+
+	// ptr = stackB;
+	// index = index_from_stack(*stackB, bigE);
+	index = bigE;
+	if (size_stack  >= 0)
+	{
+		if (index < size_stack / 2)
 		{
-			ft_role(stackA, size_stack);
-			pushB(stackA, stackB);
-			cpt++;
-			rotateB(stackB);
+			while (index-- > 0)
+				rotateB(stackB);
 		}
 		else
 		{
-			// printf("%d\n", (*stackA)->data);
-			rotateA(stackA);
-			// printf("%d\n", (*stackA)->data);
+			while (index++ < size_stack)
+				rrb(stackB);
 		}
-		if (cpt == size_chunk)
-		{
-			size_chunk *= 2;
-			start += 20;
-		}
-		printf(" -- %d -- ", (*stackA)->data);
+	}
+}
+
+void	go_back_to_a(s_swap **stackA, s_swap **stackB)
+{
+	int	bigE;
+	int	size_stack;
+	
+	size_stack = list_size(*stackB);
+	while ((*stackB) != NULL)
+	{
+		if (size_stack == 0)
+			break;
+		bigE = the_big_num(*stackB);
+		ft_role(stackB, size_stack, bigE);
+		// printf("-------------  %d -------------\n", (*stackB)->index);
+		pushA(stackA, stackB);
+		size_stack--;
+		// printf("/-- %d --/", bigE);
 	}
 }
 
@@ -111,9 +125,10 @@ void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
 void	big_stack(s_swap **stackA, s_swap **stackB, int nm)
 {
     push_to_b(stackA, stackB, nm);
-    while ((*stackB) != NULL)
-    {
-        printf("%d", (*stackB)->data);
-        (*stackB) = (*stackB)->next;
-    }
+	go_back_to_a(stackA,stackB);
+	// while ((*stackB) != NULL)
+    // {
+    //     printf("%d", (*stackB)->data);
+    //     (*stackB) = (*stackB)->next;
+    // }
 }
