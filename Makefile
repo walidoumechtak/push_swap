@@ -41,6 +41,9 @@ all : $(NAME)
 $(NAME):$(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
 
+bonus:
+	
+
 clean:
 	rm -f $(OBJ)
 
