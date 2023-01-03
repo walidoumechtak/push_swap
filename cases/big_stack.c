@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:59:42 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/03 14:55:58 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/03 18:46:12 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
 
 	while ((*stackA) != NULL)
 	{
-		if (((*stackA)->index < size_chunk * size))
+		if (((*stackA)->index <= size_chunk * size))
 		{
 			pushB(stackA, stackB);
 			cpt++;
@@ -113,6 +113,7 @@ void	go_back_to_a(s_swap **stackA, s_swap **stackB)
 	arr = desc_array(*stackB, len);
 	while (*stackB != NULL)
 	{
+		
 		index = ft_index_of(*stackB, arr[i]);
 		if (index != -1)
 		{
@@ -132,16 +133,17 @@ void	go_back_to_a(s_swap **stackA, s_swap **stackB)
 		}
 		else
 		{
-			// rra(stackA);
+			rra(stackA);
+			cpt--;
 			i++;
 		}
 	}
-	while (cpt > 0)
+	i = 0;
+	while (cpt >= 0)
 	{
 		rra(stackA);
-		cpt--;;
+		cpt--;
 	}
-	
 	free(arr);
 }
 
