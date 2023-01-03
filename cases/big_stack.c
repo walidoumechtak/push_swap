@@ -6,25 +6,49 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:59:42 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/31 14:20:02 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/03 14:55:58 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	nb_in_chunck(int *arr, int end, int nb)
+void	ft_role(s_swap **stackB,int size_stack, int bigE)
+{
+	int	index;
+	
+	index = bigE;
+	
+		if (index < size_stack / 2)
+		{
+			while (index-- > 0)
+				rotateB(stackB);
+		}
+		else
+		{
+			while (index++ < size_stack)
+				rrb(stackB);
+		}
+}
+
+int	*desc_array(s_swap *list, int len)
 {
 	int	i;
+	int	*arr1;
+	int	*arr2;
 
 	i = 0;
-	while (i <= end)
+	arr1 = get_sorted_array(list, len+1);
+	arr2 = malloc((len+1) * sizeof(int));
+	while (len >= 0)
 	{
-		if (arr[i] == nb)
-			return (nb);
+		arr2[i] = arr1[len];
+		len--;
 		i++;
 	}
-	return (0);
+	free(arr1);
+	return (arr2);
 }
+
 
 
 void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
@@ -58,77 +82,71 @@ void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
 	}
 }
 
-//======================================================================================
-
-int bige(s_swap *list)
+int	ft_index_of(s_swap *list, int n)
 {
-    s_swap  *ptr;
-    int max;
-    
-    max = list -> data;
-    list = list -> next;
-    ptr = list;
-    while (ptr != NULL)
-    {
-        if (ptr -> data > max)
-            max = ptr -> data;
-        ptr = ptr -> next;
-    }
-    return (max);
-}
+	int	i;
 
-
-void	ft_role(s_swap **stackB,int size_stack, int bigE)
-{
-	int	index;
-	
-	// s_swap **ptr;
-
-	// ptr = stackB;
-	// index = index_from_stack(*stackB, bigE);
-	index = bigE;
-	if (size_stack  >= 0)
+	i = 0;
+	while (list != NULL)
 	{
-		if (index < size_stack / 2)
+		if (list -> data == n)
 		{
-			while (index-- > 0)
-				rotateB(stackB);
+			return (i);
 		}
-		else
-		{
-			while (index++ < size_stack)
-				rrb(stackB);
-		}
+		i++;
+		list = list -> next;
 	}
+	return (-1);
 }
 
 void	go_back_to_a(s_swap **stackA, s_swap **stackB)
 {
-	int	bigE;
-	int	size_stack;
+	int	cpt;
+	int	*arr;
+	int len;
+	int	index;
+	int	i;
 	
-	size_stack = list_size(*stackB);
-	while ((*stackB) != NULL)
+	i = 0;
+	len = list_size(*stackB) - 1;
+	cpt = 0;
+	arr = desc_array(*stackB, len);
+	while (*stackB != NULL)
 	{
-		if (size_stack == 0)
-			break;
-		bigE = the_big_num(*stackB);
-		ft_role(stackB, size_stack, bigE);
-		// printf("-------------  %d -------------\n", (*stackB)->index);
-		pushA(stackA, stackB);
-		size_stack--;
-		// printf("/-- %d --/", bigE);
+		index = ft_index_of(*stackB, arr[i]);
+		if (index != -1)
+		{
+			if ((*stackB)->data == arr[i])
+			{
+				pushA(stackA, stackB);
+				i++;
+			}
+			else if (cpt == 0 || (*stackB)->data > get_last_lst(*stackA)->data)
+			{
+				pushA(stackA, stackB);
+				rotateA(stackA);
+				cpt++;
+			}
+			else
+				ft_role(stackB, list_size(*stackB), index);
+		}
+		else
+		{
+			// rra(stackA);
+			i++;
+		}
 	}
+	while (cpt > 0)
+	{
+		rra(stackA);
+		cpt--;;
+	}
+	
+	free(arr);
 }
-
 
 void	big_stack(s_swap **stackA, s_swap **stackB, int nm)
 {
     push_to_b(stackA, stackB, nm);
 	go_back_to_a(stackA,stackB);
-	// while ((*stackB) != NULL)
-    // {
-    //     printf("%d", (*stackB)->data);
-    //     (*stackB) = (*stackB)->next;
-    // }
 }

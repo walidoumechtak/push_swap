@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 13:08:59 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/31 16:23:04 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/02 21:52:02 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	push_swap(s_swap **list, int ac, s_swap **stackB)
 	else if (ac <= 101)
 		big_stack(list, stackB, 4);
 	else if (ac > 101)
-		big_stack(list, stackB, 8);
+		big_stack(list, stackB, 9);
 }
 
 int	main(int ac, char **av)
@@ -48,7 +48,6 @@ int	main(int ac, char **av)
 			i++;
 			cpt--;
 		}
-		index_the_stack(head);
 		if (is_inputs_sorted(av, ac - 1))
 			return (0);
 		if (!isall_digit(av, ac - 1) || !isnot_repeated(av, ac - 1)
@@ -57,6 +56,7 @@ int	main(int ac, char **av)
 			ft_putstr("Error\n");
 			return (0);
 		}
+		index_the_stack(head);
 		push_swap(&head, ac, &stackB);
 		lst_clear(&stackB);
 		// while ((ac - 1) > 0)
@@ -66,6 +66,6 @@ int	main(int ac, char **av)
 		// 	ac--;
 		// }
 	}
-	system("leaks push_swap");
+	// system("leaks push_swap");
 	return (0);
 }

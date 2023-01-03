@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:58:52 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/31 15:40:49 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/03 11:50:12 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ void    rra(s_swap **stackA)
     s_swap  *last;
     s_swap  *ptr2;
 
+    if ((*stackA)->next == NULL || !*stackA)
+        return ;
     ptr2 = *stackA;
     last = *stackA;
     while (last->next != NULL)
