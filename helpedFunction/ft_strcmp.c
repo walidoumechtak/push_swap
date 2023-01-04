@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 19:35:34 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 19:44:27 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:44:07 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int ft_strcmp(char *s1, char *s2)
     int i;
 
     i = 0;
-    while (s1[i] || s2[i])
+    while (s1[i] && s2[i])
     {
         if (s1[i] != s2[i])
             return (s1[i] - s2[i]);

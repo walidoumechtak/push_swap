@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:10:12 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 19:45:43 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:45:31 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ int	ft_checker(s_swap **stackA, s_swap **stackB, int ac, char *str)
     else if (ft_strcmp(str, "rrr") == 0)
         rrr(stackA, stackB);
     else
-        return (-1);
+        return (999);
     if (check_list_sort(*stackA) == 1)
         return (1);   
     else
-        return (0); 
+        return (0);    
 }
 
 int	main(int ac, char **av)
@@ -54,7 +54,7 @@ int	main(int ac, char **av)
 	int i;
     int temp;
 
-	str = malloc(4 * sizeof(char));
+	str = malloc(3 * sizeof(char));
 	if (!str)
 		exit(0);
 	if (isall_digit(av, ac - 1) == 0 || (isnot_repeated(av, ac - 1) == 0)
@@ -64,20 +64,20 @@ int	main(int ac, char **av)
 		return (0);
 	}
     fill_stack(&stackA, av, ac);
-    i = read(0, str, 4);
+    i = read(0, str, 3);
 	if (i == -1)
 	{
 		ft_putstr("Error\n", 2);
 		return (0);
 	}
-    while (str != NULL)
+    while (i > 0)
     {
 	    temp = ft_checker(&stackA, &stackB, ac, str);
-        i = read(0, str, 4);
+        i = read(0, str, 3);
     }
     if (temp == 1)
         ft_putstr("OK\n", 1);
-    else if (temp == -1)
+    else if (temp == 999)
         ft_putstr("Error\n", 2);
     else
         ft_putstr("KO\n", 1);
