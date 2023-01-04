@@ -5,6 +5,7 @@ NAMEB=checker
 
 OBJ=push_swap.o \
 	is_inputs_sorted.o \
+	fill_stack.o \
 	helpedFunction/add_back.o \
 	helpedFunction/add_front.o \
 	helpedFunction/delOne.o \
@@ -19,6 +20,8 @@ OBJ=push_swap.o \
 	helpedFunction/index_from_stack.o \
 	helpedFunction/index_the_stack.o \
 	helpedFunction/ft_putstr.o \
+	helpedFunction/check_list_sort.o \
+	helpedFunction/ft_strcmp.o \
 	operations/pushA.o \
 	operations/pushB.o \
 	operations/reverseRA.o \
@@ -37,7 +40,7 @@ OBJ=push_swap.o \
 	cases/three.o \
 	cases/big_stack.o \
 	
-OBS=checker.o \
+OBS=checker/checker.o \
 
 all : $(NAME)
 
@@ -46,7 +49,7 @@ $(NAME):$(OBJ)
 
 bonus : $(NAMEB)
 
-$(NAMEB):$(OBS)
+$(NAMEB):$(OBJ) $(OBS)
 	$(CC) $(CFLAGS) -o $@ $^
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:43:13 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/31 13:41:50 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:28:28 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,6 @@
 
 void    rotateB(s_swap **stackB)
 {
-    // s_swap  *ptr;
-    // int last;
-
-    // ptr = *stackB;
-    // last = ptr -> data;
-    // while (ptr -> next != NULL)
-    // {
-    //     ptr -> data = ptr -> next -> data;
-    //     ptr = ptr -> next;
-    // }
-    // ptr -> next -> data = last;
-
-
     s_swap  *ptr;
     s_swap  *last;
     int len;
@@ -41,6 +28,6 @@ void    rotateB(s_swap **stackB)
         *stackB = (*stackB) -> next;
         ptr -> next = NULL;    
         last -> next = ptr;
-        printf("rb\n");
+        ft_putstr("rb\n", 1);
     }
 }

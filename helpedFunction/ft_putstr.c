@@ -6,18 +6,18 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 14:42:25 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/31 14:54:30 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:24:03 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_putchar(char c)
+void	ft_putchar(char c, int n)
 {
-	write(2, &c, 1);
+	write(n, &c, 1);
 }
 
-void	ft_putstr(char *str)
+void	ft_putstr(char *str, int n)
 {
 	int i;
 
@@ -26,7 +26,7 @@ void	ft_putstr(char *str)
 		return ;
 	while (str[i])
 	{
-		ft_putchar(str[i]);
+		ft_putchar(str[i], n);
 		i++;
 	}
 }

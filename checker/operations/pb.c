@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotateAll.c                                        :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 14:45:30 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 18:28:21 by woumecht         ###   ########.fr       */
+/*   Created: 2023/01/04 17:46:35 by woumecht          #+#    #+#             */
+/*   Updated: 2023/01/04 17:46:54 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rotateAll(s_swap **stackA, s_swap **stackB)
+void	pb(s_swap **stackA, s_swap **stackB)
 {
-    rotateA(stackA);
-    rotateB(stackB);
-    ft_putstr("rr\n", 1);
+	s_swap	*ptr;
+
+	if (*stackA == NULL)
+		return ;
+	ptr = (*stackA) -> next;
+	add_fornt(stackB, *stackA);
+	*stackA = ptr;
 }

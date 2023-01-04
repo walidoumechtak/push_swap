@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotateAll.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 14:45:30 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 18:28:21 by woumecht         ###   ########.fr       */
+/*   Created: 2023/01/04 19:35:34 by woumecht          #+#    #+#             */
+/*   Updated: 2023/01/04 19:39:51 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rotateAll(s_swap **stackA, s_swap **stackB)
+int ft_strcmp(char *s1, char *s2)
 {
-    rotateA(stackA);
-    rotateB(stackB);
-    ft_putstr("rr\n", 1);
+    int i;
+
+    while (s1[i] || s2[i])
+    {
+        if (s1[i] != s2[i])
+            return (s1[i] - s2[i]);
+        i++;
+    }
+    return (0);
 }

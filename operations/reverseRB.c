@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 17:21:26 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/31 15:41:23 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:28:07 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void    rrb(s_swap **stackB)
         ptr2->next = NULL;
         last->next = ptr1;
         *stackB = last;
-        printf("rrb\n");
+        ft_putstr("rrb\n", 1);
     }
 }
 

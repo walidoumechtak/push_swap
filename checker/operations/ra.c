@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotateAll.c                                        :+:      :+:    :+:   */
+/*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 14:45:30 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 18:28:21 by woumecht         ###   ########.fr       */
+/*   Created: 2023/01/04 17:47:20 by woumecht          #+#    #+#             */
+/*   Updated: 2023/01/04 17:47:48 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rotateAll(s_swap **stackA, s_swap **stackB)
+void    ra(s_swap **stackA)     
 {
-    rotateA(stackA);
-    rotateB(stackB);
-    ft_putstr("rr\n", 1);
+    s_swap  *ptr;
+    s_swap  *last;
+    int len;
+
+    len = list_size(*stackA);
+    if (len > 1)
+    {
+        last = get_last_lst(*stackA);
+        ptr = *stackA;
+        *stackA = (*stackA) -> next;
+        ptr -> next = NULL;    
+        last -> next = ptr;
+    }
 }

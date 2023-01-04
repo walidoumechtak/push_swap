@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:58:52 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/03 11:50:12 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:27:59 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,6 @@ void    rra(s_swap **stackA)
     ptr2->next = NULL;
     last->next = *stackA;
     *stackA = last;
-    printf("rra\n");
+    ft_putstr("rra\n", 1);
 }
         

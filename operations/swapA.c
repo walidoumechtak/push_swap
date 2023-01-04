@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 10:15:46 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 15:48:19 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:28:44 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void    swapA(s_swap **stackA)
     temp = ptr -> data;
     ptr -> data = ptr -> next -> data;
     ptr -> next -> data = temp;
-    printf("sa\n");
+    ft_putstr("sa\n", 1);
 }

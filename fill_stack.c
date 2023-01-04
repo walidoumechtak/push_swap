@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotateAll.c                                        :+:      :+:    :+:   */
+/*   fill_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 14:45:30 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 18:28:21 by woumecht         ###   ########.fr       */
+/*   Created: 2023/01/04 15:44:25 by woumecht          #+#    #+#             */
+/*   Updated: 2023/01/04 16:01:52 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void    rotateAll(s_swap **stackA, s_swap **stackB)
+void    fill_stack(s_swap **head, char **av, int ac)
 {
-    rotateA(stackA);
-    rotateB(stackB);
-    ft_putstr("rr\n", 1);
+    int i;
+    int cpt;
+    i = 2;
+		cpt = ac - 2;
+		(*head) = lst_new(ft_atoi(av[1]));
+		while (cpt > 0)
+		{
+			add_back(head, lst_new(ft_atoi(av[i])));
+			i++;
+			cpt--;
+		}
 }

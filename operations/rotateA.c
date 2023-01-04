@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 12:53:53 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/28 18:42:39 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:28:13 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void    rotateA(s_swap **stackA)
         *stackA = (*stackA) -> next;
         ptr -> next = NULL;    
         last -> next = ptr;
-        printf("ra\n");
+        ft_putstr("ra\n", 1);
     }
 }

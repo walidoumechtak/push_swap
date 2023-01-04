@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotateAll.c                                        :+:      :+:    :+:   */
+/*   rrb.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 14:45:30 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 18:28:21 by woumecht         ###   ########.fr       */
+/*   Created: 2023/01/04 17:49:19 by woumecht          #+#    #+#             */
+/*   Updated: 2023/01/04 17:49:46 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rotateAll(s_swap **stackA, s_swap **stackB)
+void    rrb_bonus(s_swap **stackB)
 {
-    rotateA(stackA);
-    rotateB(stackB);
-    ft_putstr("rr\n", 1);
+    int len;
+    s_swap  *last;
+    s_swap  *ptr1;
+    s_swap  *ptr2;
+
+    if (!*stackB)
+        return ;
+
+    len = list_size(*stackB);
+    last = get_last_lst(*stackB);
+    ptr1 = *stackB;
+    ptr2 = *stackB;
+    if (len > 1)
+    {
+        while (ptr2->next->next != NULL)
+            ptr2 = ptr2->next;
+        ptr2->next = NULL;
+        last->next = ptr1;
+        *stackB = last;
+    }
 }
