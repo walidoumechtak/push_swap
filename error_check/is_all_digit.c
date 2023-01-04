@@ -6,24 +6,32 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 09:59:55 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/13 12:30:03 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 14:58:51 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
+int	is_d(char c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}
+
 int	isall_digit(char **av, int ac)
 {
 	int i;
 	int j;
-
-	j = 0;
-	i = 0;
+	
+	
+	i = 1;
 	while (ac > 0)
 	{
-		while (av[i][j])
+		j = 0;
+		while (av[i][j] != '\0')
 		{
-			if (av[i][j] < '0' && av[i][j] > '9')
+			if (is_d(av[i][j]) == 0)
 				return (0);
 			j++;
 		}

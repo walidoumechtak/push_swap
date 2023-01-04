@@ -6,16 +6,16 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 21:42:52 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/13 12:05:12 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 08:53:43 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 #include <limits.h>
 
-static unsigned long	result_f(char *str, int i, int signe)
+long long int	result_f(char *str, int i, int signe)
 {
-	unsigned long	result;
+	long long int	result;
 
 	result = 0;
 	while (str[i] >= '0' && str[i] <= '9')
@@ -30,11 +30,11 @@ static unsigned long	result_f(char *str, int i, int signe)
 	return (result);
 }
 
-size_t	ft_atoi(const char *str)
+long long int	ft_atoi(const char *str)
 {
-	int	i;
-	size_t	result;
-	size_t	signe;
+	int				i;
+	long long int	result;
+	long long int	signe;
 
 	result = 0;
 	i = 0;

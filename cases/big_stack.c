@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:59:42 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/03 18:46:12 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 15:12:10 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,6 +144,8 @@ void	go_back_to_a(s_swap **stackA, s_swap **stackB)
 		rra(stackA);
 		cpt--;
 	}
+	if ((*stackA)->data > arr[len])
+		rotateA(stackA);
 	free(arr);
 }
 

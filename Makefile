@@ -1,6 +1,7 @@
 CC=cc
 CFLAGS=-Wall -Wextra -Werror
 NAME=push_swap
+NAMEB=checker
 
 OBJ=push_swap.o \
 	is_inputs_sorted.o \
@@ -36,13 +37,17 @@ OBJ=push_swap.o \
 	cases/three.o \
 	cases/big_stack.o \
 	
+OBS=checker.o \
+
 all : $(NAME)
 
 $(NAME):$(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^ -fsanitize=address
+	$(CC) $(CFLAGS) -o $@ $^
 
-bonus:
-	
+bonus : $(NAMEB)
+
+$(NAMEB):$(OBS)
+	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
 	rm -f $(OBJ)
@@ -51,6 +56,8 @@ fclean:
 	rm -f $(NAME) $(OBJ)
 
 re:fclean all
+
+ww:all clean
 
 git:
 	git add . && git commit -m "push swap" && git push
