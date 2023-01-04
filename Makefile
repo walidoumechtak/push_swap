@@ -41,6 +41,17 @@ OBJ=push_swap.o \
 	cases/big_stack.o \
 	
 OBS=checker/checker.o \
+	checker/operations/pa.o \
+	checker/operations/pb.o \
+	checker/operations/ra.o \
+	checker/operations/rb.o \
+	checker/operations/rr.o \
+	checker/operations/rra.o \
+	checker/operations/rrb.o \
+	checker/operations/rrr.o \
+	checker/operations/sa.o \
+	checker/operations/sb.o \
+	checker/operations/ss.o \
 
 all : $(NAME)
 
@@ -53,10 +64,10 @@ $(NAMEB):$(OBJ) $(OBS)
 	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBS)
 
 fclean:
-	rm -f $(NAME) $(OBJ)
+	rm -f $(NAME) $(OBJ) $(OBS)
 
 re:fclean all
 

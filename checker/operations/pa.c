@@ -6,11 +6,11 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:45:08 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 17:47:04 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 19:48:38 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 void	pa(s_swap **stackA, s_swap **stackB)
 {

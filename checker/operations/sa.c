@@ -6,11 +6,11 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:50:00 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 17:51:50 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 19:50:34 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 void    sa(s_swap **stackA)
 {

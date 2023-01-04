@@ -6,14 +6,14 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:50:29 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 17:56:07 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/04 19:51:27 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 void    ss(s_swap **stackA, s_swap **stackB)
 {
-    swapA(stackA);
-    swapB(stackB);
+    sa(stackA);
+    sb(stackB);
 }
