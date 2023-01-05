@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 10:00:56 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/17 14:38:28 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/05 08:04:46 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,11 @@ int	isnot_repeated(char **av, int ac)
 				continue ;
 			}
 			if (arr[i] == arr[j])
-            {
-                free(arr);
-				return (0);
-            }
+				return (free(arr), 0);
 			j++;
 		}
 		i++;
 	}
-    free(arr);
+	free(arr);
 	return (1);
 }

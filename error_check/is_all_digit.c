@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 09:59:55 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 17:09:45 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/05 08:02:34 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ int	is_d(char c)
 
 int	isall_digit(char **av, int ac)
 {
-	int i;
-	int j;
-	
-	
+	int	i;
+	int	j;
+
 	i = 1;
 	while (ac > 0)
 	{
