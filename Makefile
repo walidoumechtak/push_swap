@@ -1,7 +1,7 @@
 CC=cc
 CFLAGS=-Wall -Wextra -Werror
 NAME=push_swap
-NAMEB=checkers
+NAMEB=checker
 
 OBJ=push_swap.o \
 	is_inputs_sorted.o \
@@ -43,18 +43,18 @@ OBJ=push_swap.o \
 	cases/three.o \
 	cases/big_stack.o \
 	
-OBS=checker/checker.o \
-	checker/operations/pa.o \
-	checker/operations/pb.o \
-	checker/operations/ra.o \
-	checker/operations/rb.o \
-	checker/operations/rr.o \
-	checker/operations/rra.o \
-	checker/operations/rrb.o \
-	checker/operations/rrr.o \
-	checker/operations/sa.o \
-	checker/operations/sb.o \
-	checker/operations/ss.o \
+OBS=checker_bonus/checker.o \
+	checker_bonus/operations/pa.o \
+	checker_bonus/operations/pb.o \
+	checker_bonus/operations/ra.o \
+	checker_bonus/operations/rb.o \
+	checker_bonus/operations/rr.o \
+	checker_bonus/operations/rra.o \
+	checker_bonus/operations/rrb.o \
+	checker_bonus/operations/rrr.o \
+	checker_bonus/operations/sa.o \
+	checker_bonus/operations/sb.o \
+	checker_bonus/operations/ss.o \
 	is_inputs_sorted.o \
 	fill_stack.o \
 	helpedFunction/add_back.o \
