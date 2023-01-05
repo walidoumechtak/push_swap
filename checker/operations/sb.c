@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:50:15 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 19:50:36 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/05 09:20:16 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@ void	sb(s_swap **stackB)
 	int temp;
 
 	ptr = *stackB;
-
-	temp = ptr->data;
-	ptr->data = ptr->next->data;
-	ptr->next->data = temp;
+	
+	if (*stackB)
+	{
+		temp = ptr->data;
+		ptr->data = ptr->next->data;
+		ptr->next->data = temp;
+	}
 }
