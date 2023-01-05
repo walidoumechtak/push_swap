@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:10:12 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 09:26:20 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/05 12:43:49 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	ft_checker(s_swap **stackA, s_swap **stackB, char *str)
 {
     if (ft_strcmp(str, "sa") == 0)
         sa(stackA);
-        // printf("hasalready");
     else if (ft_strcmp(str, "sb") == 0)
         sb(stackB);
     else if (ft_strcmp(str, "ss") == 0)
@@ -63,15 +62,45 @@ int ft_errors(char **av, int ac)
         return (1);
 }
 
+int ft_strlen(char *str)
+{
+    int i;
+
+    i = 0;
+    while (str[i] >= 'a' && str[i] <= 'z')
+        i++;
+    return (i);
+}
+
+int ft_read(s_swap **stackA, s_swap **stackB, char *str)
+{
+    int i;
+    int temp;
+    i = 1;
+    while (i > 0)
+    {
+        i = read(0, str, 4);
+        if (i == 0)
+            break ;
+         if (i < 0)
+        {
+        	ft_putstr("Error\n", 2);
+        	return (0);
+        }
+        str[ft_strlen(str)] = '\0';
+	    temp = ft_checker(stackA, stackB, str);
+    }
+    return (temp);
+}
+
 int	main(int ac, char **av)
 {
 	s_swap *stackA;
 	s_swap *stackB;
 	char *str;
-	int i;
     int temp;
 
-	str = malloc(3 * sizeof(char));
+	str = malloc(4 * sizeof(char));
 	if (!str)
 		exit(0);
 	if (ft_errors(av, ac) == 0)
@@ -79,19 +108,11 @@ int	main(int ac, char **av)
 		ft_putstr("Error\n", 2);
 		return (0);
 	}
+    temp = is_inputs_sorted(av, ac - 1);
+        if (temp == 1)
+            return (free(str), 0);
     fill_stack(&stackA, av, ac);
-    i = read(0, str, 3);
-	if (i == -1)
-	{
-		ft_putstr("Error\n", 2);
-		return (0);
-	}
-    i = 1;
-    while (i > 0)
-    {
-	    temp = ft_checker(&stackA, &stackB, str);
-        i = read(0, str, 3);
-    }
+    temp = ft_read(&stackA, &stackB, str);
     free (str);
     if (temp == 1)
         ft_putstr("OK\n", 1);
