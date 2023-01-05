@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 10:02:19 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 08:53:11 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/05 08:05:26 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 long long int	*get_arr_numbers_big(char **av, int ac)
 {
-	int		i;
+	int				i;
 	long long int	*arr;
 
 	i = 0;
@@ -30,7 +30,7 @@ long long int	*get_arr_numbers_big(char **av, int ac)
 
 int	isnot_big_int(char **av, int ac)
 {
-	int		i;
+	int				i;
 	long long int	*arr;
 
 	arr = get_arr_numbers_big(av, ac);
