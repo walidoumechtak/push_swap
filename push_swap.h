@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 19:40:45 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/05 06:32:06 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,11 @@ s_swap				*lst_new(int content);
 void				add_fornt(s_swap **list, s_swap *new);
 s_swap				*get_last_lst(s_swap *lst);
 void				ft_putstr(char *str, int n);
+int					ft_index_of(s_swap *list, int n);
+void				ft_role(s_swap **stackB, int size_stack, int bigE);
+int					*desc_array(s_swap *list, int len);
 
 long long int		ft_atoi(const char *str);
-// int	*get_array_numbers(char **av, int ac);
 int					*get_array(s_swap *lst, int len);
 
 void				pushA(s_swap **stackA, s_swap **stackB);
@@ -59,23 +61,23 @@ int					*get_sorted_array(s_swap *stackA, int len);
 int					index_from_stack(s_swap *stack, int nb);
 void				index_the_stack(s_swap *stack);
 int					check_list_sort(s_swap *list);
-int 				ft_strcmp(char *s1, char *s2);
+int					ft_strcmp(char *s1, char *s2);
 
 void				s_five(s_swap **list, s_swap **stackB, int ac);
 void				three(s_swap **list, int ac);
 void				big_stack(s_swap **stackA, s_swap **stackB, int nm);
-void    			fill_stack(s_swap **head, char **av, int ac);
+void				fill_stack(s_swap **head, char **av, int ac);
 
 void				pa(s_swap **stackA, s_swap **stackB);
 void				pb(s_swap **stackA, s_swap **stackB);
-void    			ra(s_swap **stackA);
-void    			rb(s_swap **stackB);
-void    			rr(s_swap **stackA, s_swap **stackB);
-void    			rra_bonus(s_swap **stackA);
-void    			rrb_bonus(s_swap **stackB);
-void    			rrr(s_swap **stackA, s_swap **stackB);
-void    			sa(s_swap **stackA);
+void				ra(s_swap **stackA);
+void				rb(s_swap **stackB);
+void				rr(s_swap **stackA, s_swap **stackB);
+void				rra_bonus(s_swap **stackA);
+void				rrb_bonus(s_swap **stackB);
+void				rrr(s_swap **stackA, s_swap **stackB);
+void				sa(s_swap **stackA);
 void				sb(s_swap **stackB);
-void    			ss(s_swap **stackA, s_swap **stackB);
+void				ss(s_swap **stackA, s_swap **stackB);
 
 #endif

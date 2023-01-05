@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 11:11:31 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/28 21:09:26 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/05 06:40:34 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@ void    rrpB1(s_swap **list)
 {
     rra(list);
     rra(list);
+}
+
+void    swap_push_b(s_swap **stackA, s_swap **stackB)
+{
+    swapA(list);
+    pushB(list, stackB);
+    len--;
 }
 
 void    s_five_cases(s_swap **list, s_swap **stackB)

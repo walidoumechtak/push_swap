@@ -22,6 +22,9 @@ OBJ=push_swap.o \
 	helpedFunction/ft_putstr.o \
 	helpedFunction/check_list_sort.o \
 	helpedFunction/ft_strcmp.o \
+	helpedFunction/ft_indexof.o \
+	helpedFunction/ft_role.o \
+	helpedFunction/desc_array.o \
 	operations/pushA.o \
 	operations/pushB.o \
 	operations/reverseRA.o \
