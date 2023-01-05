@@ -6,16 +6,23 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:10:12 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 21:45:31 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/05 08:21:36 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 #include <limits.h>
 
-int	ft_checker(s_swap **stackA, s_swap **stackB, int ac, char *str)
+int cls(s_swap *stackA)
 {
-    ac += 0;
+    if (check_list_sort(stackA) == 1)
+        return (1);   
+    else
+        return (0);
+}
+
+int	ft_checker(s_swap **stackA, s_swap **stackB, char *str)
+{
     if (ft_strcmp(str, "sa") == 0)
         sa(stackA);
     else if (ft_strcmp(str, "sb") == 0)
@@ -40,10 +47,7 @@ int	ft_checker(s_swap **stackA, s_swap **stackB, int ac, char *str)
         rrr(stackA, stackB);
     else
         return (999);
-    if (check_list_sort(*stackA) == 1)
-        return (1);   
-    else
-        return (0);    
+    return (cls(*stackA));
 }
 
 int	main(int ac, char **av)
@@ -72,7 +76,7 @@ int	main(int ac, char **av)
 	}
     while (i > 0)
     {
-	    temp = ft_checker(&stackA, &stackB, ac, str);
+	    temp = ft_checker(&stackA, &stackB, str);
         i = read(0, str, 3);
     }
     if (temp == 1)
