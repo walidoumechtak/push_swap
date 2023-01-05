@@ -76,6 +76,7 @@ OBS=checker_bonus/checker.o \
 	helpedFunction/ft_indexof.o \
 	helpedFunction/ft_role.o \
 	helpedFunction/desc_array.o \
+	helpedFunction/ft_strlena.o \
 	operations/pushA.o \
 	operations/pushB.o \
 	operations/reverseRA.o \
@@ -93,6 +94,8 @@ OBS=checker_bonus/checker.o \
 	cases/five.o \
 	cases/three.o \
 	cases/big_stack.o \
+	get_next_line./get_next_line.o \
+	get_next_line./get_next_line_utils.o \
 
 all : $(NAME)
 
@@ -102,7 +105,7 @@ $(NAME):$(OBJ)
 bonus : $(NAMEB)
 
 $(NAMEB):$(OBS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ -fsanitize=address
 
 clean:
 	rm -f $(OBJ) $(OBS)

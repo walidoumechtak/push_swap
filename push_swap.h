@@ -6,12 +6,16 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 06:32:06 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/05 16:21:20 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 4
+# endif
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -62,11 +66,21 @@ int					index_from_stack(s_swap *stack, int nb);
 void				index_the_stack(s_swap *stack);
 int					check_list_sort(s_swap *list);
 int					ft_strcmp(char *s1, char *s2);
+int					ft_strlena(char *str);
 
 void				s_five(s_swap **list, s_swap **stackB, int ac);
 void				three(s_swap **list, int ac);
 void				big_stack(s_swap **stackA, s_swap **stackB, int nm);
 void				fill_stack(s_swap **head, char **av, int ac);
+
+char				*get_next_line(int fd);
+void				*ft_calloc(size_t count, size_t size);
+char				*ft_strjoin(char const *s1, char const *s2);
+int					ft_strchr(const char *s, int c);
+size_t				ft_strlen(const char *s);
+void				*free_it(char *s1, char *s2);
+char				*ft_strdup(const char *s1);
+void				*ft_memcpy(void *dst, const void *src, size_t n);
 
 void				pa(s_swap **stackA, s_swap **stackB);
 void				pb(s_swap **stackA, s_swap **stackB);
