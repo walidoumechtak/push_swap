@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:10:12 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 16:01:02 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/05 16:58:06 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ int	ft_errors(char **av, int ac)
 
 int	ft_read(s_swap **stackA, s_swap **stackB, char *str)
 {
-    // int i;
     int temp;
 
     str = get_next_line(0);
@@ -75,24 +74,6 @@ int	ft_read(s_swap **stackA, s_swap **stackB, char *str)
         str = get_next_line(0);
     }
     return (temp);
-	// int	i;
-	// int	temp;
-
-	// i = 1;
-	// while (i > 0)
-	// {
-	// 	i = read(0, str, 4);
-	// 	if (i == 0)
-	// 		return (temp);
-	// 	if (i < 0)
-	// 	{
-	// 		ft_putstr("Error\n", 2);
-	// 		return (0);
-	// 	}
-	// 	str[ft_strlen(str)] = '\0';
-	// 	temp = ft_checker(stackA, stackB, str);
-	// }
-	// return (temp);
 }
 
 int	main(int ac, char **av)
