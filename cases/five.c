@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 11:11:31 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 06:40:34 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/05 07:14:06 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void    rrpB1(s_swap **list)
     rra(list);
 }
 
-void    swap_push_b(s_swap **stackA, s_swap **stackB)
+void    swap_push_b(s_swap **list, s_swap **stackB, int *len)
 {
     swapA(list);
     pushB(list, stackB);
@@ -41,6 +41,7 @@ void    s_five_cases(s_swap **list, s_swap **stackB)
             }
             else if (the_small_num(*list) == 1)
             {
+                // swap_push_b(list, stackB, &len);
                 swapA(list);
                 pushB(list, stackB);
                 len--;
