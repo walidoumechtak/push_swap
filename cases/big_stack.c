@@ -6,7 +6,7 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:59:42 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 17:00:53 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 18:48:23 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ void	push_to_b(t_swap **stackA, t_swap **stackB, int n)
 		if (cpt == size_chunk * size)
 			size++;
 	}
+}
+
+void	go_back(t_swap **stackA, t_swap **stackB, int index, int cpt)
+{
+	
 }
 
 void	go_back_to_a(t_swap **stackA, t_swap **stackB)
@@ -79,7 +84,6 @@ void	go_back_to_a(t_swap **stackA, t_swap **stackB)
 			i++;
 		}
 	}
-	i = 0;
 	while (cpt >= 0)
 	{
 		rra(stackA);

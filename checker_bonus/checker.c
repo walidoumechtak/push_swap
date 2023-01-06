@@ -6,7 +6,7 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:10:12 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 18:00:54 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 18:28:22 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,6 @@ int	main(int ac, char **av)
 		ft_putstr("Error\n", 2);
 		return (0);
 	}
-	// temp = is_inputs_sorted(av, ac - 1);
-	// if (temp == 1)
-	// 	return (0);
 	fill_stack(&stacka, av, ac);
 	temp = ft_read(&stacka, &stackb, str);
 	free(str);
