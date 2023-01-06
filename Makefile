@@ -4,7 +4,6 @@ NAME=push_swap
 NAMEB=checker
 
 OBJ=push_swap.o \
-	is_inputs_sorted.o \
 	fill_stack.o \
 	helpedFunction/add_back.o \
 	helpedFunction/add_front.o \
@@ -59,7 +58,6 @@ OBS=checker_bonus/checker.o \
 	checker_bonus/operations/sa.o \
 	checker_bonus/operations/sb.o \
 	checker_bonus/operations/ss.o \
-	is_inputs_sorted.o \
 	fill_stack.o \
 	helpedFunction/add_back.o \
 	helpedFunction/add_front.o \
