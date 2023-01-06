@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   lst_clear.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 13:22:45 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:08:16 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:03:56 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	lst_clear(s_swap **lst)
+void	lst_clear(t_swap **lst)
 {
-	s_swap	*tmp;
-	s_swap	*p;
+	t_swap	*tmp;
+	t_swap	*p;
 
 	p = *lst;
 	if (!p)

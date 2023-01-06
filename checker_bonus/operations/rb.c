@@ -6,16 +6,16 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:47:52 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 16:19:18 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:01:37 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	rb(s_swap **stackB)
+void	rb(t_swap **stackB)
 {
-	s_swap	*ptr;
-	s_swap	*last;
+	t_swap	*ptr;
+	t_swap	*last;
 	int		len;
 
 	if (*stackB == NULL)

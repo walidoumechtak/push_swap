@@ -6,13 +6,13 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:50:29 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 16:19:44 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:02:06 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	ss(s_swap **stackA, s_swap **stackB)
+void	ss(t_swap **stackA, t_swap **stackB)
 {
 	sa(stackA);
 	sb(stackB);

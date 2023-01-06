@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   reverseRB.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 17:21:26 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:24:44 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:06:44 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	rrb(s_swap **stackB)
+void	rrb(t_swap **stackB)
 {
-	s_swap	*last;
-	s_swap	*ptr1;
-	s_swap	*ptr2;
+	t_swap	*last;
+	t_swap	*ptr1;
+	t_swap	*ptr2;
 	int		len;
 
 	if (!*stackB)

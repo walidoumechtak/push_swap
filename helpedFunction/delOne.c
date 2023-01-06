@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   delOne.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:47:40 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:04:58 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:03:07 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	delone(s_swap **list)
+void	delone(t_swap **list)
 {
-	s_swap	*s;
+	t_swap	*s;
 
 	s = *list;
 	if (!list || !s)

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   index_the_stack.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 12:58:53 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:08:05 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:03:47 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	index_the_stack(s_swap *stack)
+void	index_the_stack(t_swap *stack)
 {
-	s_swap	*ptr;
+	t_swap	*ptr;
 	int		*arr;
 	int		i;
 	int		temp;

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   list_size.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:29:08 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:08:11 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:03:51 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	list_size(s_swap *ptr)
+int	list_size(t_swap *ptr)
 {
 	int	i;
 

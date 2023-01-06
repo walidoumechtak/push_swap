@@ -6,15 +6,15 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:46:35 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 16:21:12 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:01:27 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	pb(s_swap **stackA, s_swap **stackB)
+void	pb(t_swap **stackA, t_swap **stackB)
 {
-	s_swap	*ptr;
+	t_swap	*ptr;
 
 	if (*stackA == NULL)
 		return ;

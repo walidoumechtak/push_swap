@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_sorted_array.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 15:04:17 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:07:46 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:03:39 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_swap(int *arr, int i, int j)
 	arr[j] = temp;
 }
 
-int	*get_the_array(s_swap *stackA, int len)
+int	*get_the_array(t_swap *stackA, int len)
 {
 	int	*arr;
 	int	i;
@@ -37,7 +37,7 @@ int	*get_the_array(s_swap *stackA, int len)
 	return (arr);
 }
 
-int	*get_sorted_array(s_swap *stackA, int len)
+int	*get_sorted_array(t_swap *stackA, int len)
 {
 	int	*arr;
 	int	i;

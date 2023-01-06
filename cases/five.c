@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   five.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 11:11:31 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 12:30:57 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:01:03 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	rrpb1(s_swap **list)
+void	rrpb1(t_swap **list)
 {
 	rra(list);
 	rra(list);
 }
 
-void	swap_push_b(s_swap **list, s_swap **stackB, int *len)
+void	swap_push_b(t_swap **list, t_swap **stackB, int *len)
 {
 	swapa(list);
 	pushb(list, stackB);
 	(*len)--;
 }
 
-void	s_five_cases(s_swap **list, s_swap **stackB)
+void	s_five_cases(t_swap **list, t_swap **stackB)
 {
 	int	len;
 
@@ -52,9 +52,9 @@ void	s_five_cases(s_swap **list, s_swap **stackB)
 	three(list, 3);
 }
 
-void	s_five(s_swap **list, s_swap **stackB, int ac)
+void	s_five(t_swap **list, t_swap **stackB, int ac)
 {
-	s_swap	*ptr;
+	t_swap	*ptr;
 	int		i;
 
 	ptr = *list;

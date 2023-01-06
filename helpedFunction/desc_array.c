@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   desc_array.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 06:31:10 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:05:12 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:03:11 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	*desc_array(s_swap *list, int len)
+int	*desc_array(t_swap *list, int len)
 {
 	int	i;
 	int	*arr1;

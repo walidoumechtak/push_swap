@@ -6,13 +6,13 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 17:24:39 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 16:11:54 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:06:59 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	rrall(s_swap **stackA, s_swap **stackB)
+void	rrall(t_swap **stackA, t_swap **stackB)
 {
 	rra(stackA);
 	rrb(stackB);

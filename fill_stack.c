@@ -6,7 +6,7 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:44:25 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 16:10:52 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:07:18 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	free_all(char **str)
 	}
 }
 
-void	fill_stack(s_swap **head, char **av, int ac)
+void	fill_stack(t_swap **head, char **av, int ac)
 {
 	char	**s;
 	int		i;

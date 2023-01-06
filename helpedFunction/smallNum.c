@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   smallNum.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 08:23:56 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:08:24 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:04:05 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	the_small_num(s_swap *list)
+int	the_small_num(t_swap *list)
 {
-	s_swap	*ptr;
+	t_swap	*ptr;
 	int		min_index;
 	int		i;
 	int		min;

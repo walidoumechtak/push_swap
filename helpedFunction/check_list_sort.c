@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   check_list_sort.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 17:42:46 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 16:54:05 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:39:12 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	check_list_sort(s_swap *list)
+int	check_list_sort(t_swap *list)
 {
 	int		test;
-	s_swap	*ptr1;
+	t_swap	*ptr1;
 
-	if (!list)
-		return (0);
+	if (!list || list_size(list) < 2)
+		return (1);
 	ptr1 = list;
 	test = 0;
 	while (ptr1->next != NULL)

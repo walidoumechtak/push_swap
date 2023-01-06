@@ -105,7 +105,7 @@ OBS=checker_bonus/checker.o \
 all : $(NAME)
 
 $(NAME):$(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^ -fsanitize=address
+	$(CC) $(CFLAGS) -o $@ $^
 
 bonus : $(NAMEB)
 

@@ -6,13 +6,13 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 13:08:59 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 16:21:49 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:53:06 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_swap(s_swap **list, int ac, s_swap **stackB)
+void	push_swap(t_swap **list, int ac, t_swap **stackB)
 {
 	if (ac == 2)
 	{
@@ -31,9 +31,9 @@ void	push_swap(s_swap **list, int ac, s_swap **stackB)
 
 int	main(int ac, char **av)
 {
-	s_swap	*stackb;
-	s_swap	*head;
-	s_swap	*ptr;
+	t_swap	*stackb;
+	t_swap	*head;
+	t_swap	*ptr;
 
 	stackb = NULL;
 	if (ac > 1)

@@ -6,14 +6,14 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:10:12 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 16:18:42 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:02:14 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 #include <limits.h>
 
-int	cls(s_swap *stackA)
+int	cls(t_swap *stackA)
 {
 	if (check_list_sort(stackA) == 1)
 		return (1);
@@ -21,7 +21,7 @@ int	cls(s_swap *stackA)
 		return (0);
 }
 
-int	ft_checker(s_swap **stackA, s_swap **stackB, char *str)
+int	ft_checker(t_swap **stackA, t_swap **stackB, char *str)
 {
 	if (ft_strcmp(str, "sa") == 0)
 		sa(stackA);
@@ -62,7 +62,7 @@ int	ft_errors(char **av, int ac)
 		return (1);
 }
 
-int	ft_read(s_swap **stackA, s_swap **stackB, char *str)
+int	ft_read(t_swap **stackA, t_swap **stackB, char *str)
 {
 	int	temp;
 
@@ -78,8 +78,8 @@ int	ft_read(s_swap **stackA, s_swap **stackB, char *str)
 
 int	main(int ac, char **av)
 {
-	s_swap	*stacka;
-	s_swap	*stackb;
+	t_swap	*stacka;
+	t_swap	*stackb;
 	char	*str;
 	int		temp;
 

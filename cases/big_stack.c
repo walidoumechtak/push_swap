@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   big_stack.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:59:42 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:44:34 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:00:53 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
+void	push_to_b(t_swap **stackA, t_swap **stackB, int n)
 {
-	s_swap	*ptr;
+	t_swap	*ptr;
 	int		size_stack;
 	int		size_chunk;
 	int		cpt;
@@ -41,7 +41,7 @@ void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
 	}
 }
 
-void	go_back_to_a(s_swap **stackA, s_swap **stackB)
+void	go_back_to_a(t_swap **stackA, t_swap **stackB)
 {
 	int	cpt;
 	int	*arr;
@@ -90,7 +90,7 @@ void	go_back_to_a(s_swap **stackA, s_swap **stackB)
 	free(arr);
 }
 
-void	big_stack(s_swap **stackA, s_swap **stackB, int nm)
+void	big_stack(t_swap **stackA, t_swap **stackB, int nm)
 {
 	push_to_b(stackA, stackB, nm);
 	go_back_to_a(stackA, stackB);

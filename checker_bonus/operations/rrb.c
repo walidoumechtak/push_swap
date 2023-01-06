@@ -6,18 +6,18 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:49:19 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 16:19:30 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:01:48 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	rrb_bonus(s_swap **stackB)
+void	rrb_bonus(t_swap **stackB)
 {
 	int		len;
-	s_swap	*last;
-	s_swap	*ptr1;
-	s_swap	*ptr2;
+	t_swap	*last;
+	t_swap	*ptr1;
+	t_swap	*ptr2;
 
 	if (!*stackB)
 		return ;

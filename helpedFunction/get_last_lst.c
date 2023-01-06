@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_last_lst.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 10:09:11 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:07:29 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:03:35 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-s_swap	*get_last_lst(s_swap *lst)
+t_swap	*get_last_lst(t_swap *lst)
 {
 	if (!lst)
 		return (NULL);

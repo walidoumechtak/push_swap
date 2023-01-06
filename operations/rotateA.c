@@ -6,16 +6,16 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 12:53:53 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 16:08:19 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:06:48 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	rotatea(s_swap **stackA)
+void	rotatea(t_swap **stackA)
 {
-	s_swap	*ptr;
-	s_swap	*last;
+	t_swap	*ptr;
+	t_swap	*last;
 	int		len;
 
 	len = list_size(*stackA);

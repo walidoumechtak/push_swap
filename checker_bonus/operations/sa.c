@@ -6,15 +6,15 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:50:00 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 16:19:37 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:01:57 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void	sa(s_swap **stackA)
+void	sa(t_swap **stackA)
 {
-	s_swap	*ptr;
+	t_swap	*ptr;
 	int		temp;
 
 	ptr = *stackA;

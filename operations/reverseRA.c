@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   reverseRA.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:58:52 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:13:53 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:06:40 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	*get_array(s_swap *lst, int len)
+int	*get_array(t_swap *lst, int len)
 {
 	int	*arr;
 	int	temp;
@@ -36,10 +36,10 @@ int	*get_array(s_swap *lst, int len)
 	return (arr);
 }
 
-void	rra(s_swap **stackA)
+void	rra(t_swap **stackA)
 {
-	s_swap	*last;
-	s_swap	*ptr2;
+	t_swap	*last;
+	t_swap	*ptr2;
 
 	if ((*stackA)->next == NULL || !*stackA)
 		return ;
