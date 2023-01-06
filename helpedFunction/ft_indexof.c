@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 06:27:10 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 06:28:03 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:05:45 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_index_of(s_swap *list, int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (list != NULL)

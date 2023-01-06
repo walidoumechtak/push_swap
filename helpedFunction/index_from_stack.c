@@ -6,22 +6,22 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 17:48:07 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/28 11:42:42 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:07:59 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int index_from_stack(s_swap *stack, int nb)
+int	index_from_stack(s_swap *stack, int nb)
 {
-    int i;
-    
-    i = 0;
-    while (stack != NULL)
-    {
-        if (nb == stack->index)
-            return (i);
-        i++;
-    }
-    return (-1);
+	int	i;
+
+	i = 0;
+	while (stack != NULL)
+	{
+		if (nb == stack->index)
+			return (i);
+		i++;
+	}
+	return (-1);
 }

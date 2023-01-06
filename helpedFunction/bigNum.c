@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 08:24:43 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 08:06:45 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:04:09 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	the_big_num(s_swap *list)
 {
-	s_swap *ptr;
-	int max_index;
-	int i;
-	int max;
+	s_swap	*ptr;
+	int		max_index;
+	int		i;
+	int		max;
 
 	i = 1;
 	if (!list)

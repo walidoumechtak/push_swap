@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 15:04:17 by woumecht          #+#    #+#             */
-/*   Updated: 2022/12/26 15:05:01 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:07:46 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ int	*get_the_array(s_swap *stackA, int len)
 
 int	*get_sorted_array(s_swap *stackA, int len)
 {
-	int *arr;
-	int i;
-	int j;
+	int	*arr;
+	int	i;
+	int	j;
 
 	arr = get_the_array(stackA, len);
 	i = 0;

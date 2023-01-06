@@ -6,20 +6,20 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 08:47:40 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 08:08:03 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:04:58 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    delone(s_swap **list)
+void	delone(s_swap **list)
 {
-    s_swap  *s;
+	s_swap	*s;
 
-    s = *list;
-    if (!list || !s)
-        return ;
-        *list = s -> next;
-    *list = s;
-    free(s);
+	s = *list;
+	if (!list || !s)
+		return ;
+	*list = s->next;
+	*list = s;
+	free(s);
 }

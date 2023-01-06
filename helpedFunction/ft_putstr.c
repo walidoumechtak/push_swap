@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 14:42:25 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 18:24:03 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:05:53 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putchar(char c, int n)
 
 void	ft_putstr(char *str, int n)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!str)
