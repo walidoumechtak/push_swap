@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 06:29:36 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:06:33 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:43:11 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_role(s_swap **stackB, int size_stack, int bigE)
 	if (index < size_stack / 2)
 	{
 		while (index-- > 0)
-			rotateB(stackB);
+			rotateb(stackB);
 	}
 	else
 	{

@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:10:12 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 16:58:06 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:42:29 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ int	main(int ac, char **av)
 	char	*str;
 	int		temp;
     
+	str = NULL;
     if (ft_errors(av, ac) == 0)
 	{
 		ft_putstr("Error\n", 2);
@@ -91,9 +92,9 @@ int	main(int ac, char **av)
     temp = is_inputs_sorted(av, ac - 1);
 	if (temp == 1)
 		return (0);
-	str = malloc(4 * sizeof(char));
-	if (!str)
-		return(free(str), 0);
+	// str = malloc(4 * sizeof(char));
+	// if (!str)
+	// 	return(free(str), 0);
 	fill_stack(&stacka, av, ac);
 	temp = ft_read(&stacka, &stackb, str);
 	free(str);

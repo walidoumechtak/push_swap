@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:59:42 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:39:57 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:44:34 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
 				rotateb(stackB);
 		}
 		else
-			rotateA(stackA);
+			rotatea(stackA);
 		if (cpt == size_chunk * size)
 			size++;
 	}
