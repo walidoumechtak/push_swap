@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:59:42 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 08:01:57 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:39:57 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ void	push_to_b(s_swap **stackA, s_swap **stackB, int n)
 	{
 		if (((*stackA)->index <= size_chunk * size))
 		{
-			pushB(stackA, stackB);
+			pushb(stackA, stackB);
 			cpt++;
 			if ((*stackB)->index >= ((size_chunk * size)) - (size_chunk / 2))
-				rotateB(stackB);
+				rotateb(stackB);
 		}
 		else
 			rotateA(stackA);
@@ -60,13 +60,13 @@ void	go_back_to_a(s_swap **stackA, s_swap **stackB)
 		{
 			if ((*stackB)->data == arr[i])
 			{
-				pushA(stackA, stackB);
+				pusha(stackA, stackB);
 				i++;
 			}
 			else if (cpt == 0 || (*stackB)->data > get_last_lst(*stackA)->data)
 			{
-				pushA(stackA, stackB);
-				rotateA(stackA);
+				pusha(stackA, stackB);
+				rotatea(stackA);
 				cpt++;
 			}
 			else
@@ -86,7 +86,7 @@ void	go_back_to_a(s_swap **stackA, s_swap **stackB)
 		cpt--;
 	}
 	if ((*stackA)->data > arr[len])
-		rotateA(stackA);
+		rotatea(stackA);
 	free(arr);
 }
 
