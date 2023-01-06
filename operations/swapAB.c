@@ -6,13 +6,13 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:42:01 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 18:28:53 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:26:03 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    swapAB(s_swap *stackA, s_swap *stackB)
+void    swapab(s_swap *stackA, s_swap *stackB)
 {
     swapA(&stackA);
     swapB(stackB);

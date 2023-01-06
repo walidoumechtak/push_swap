@@ -6,13 +6,13 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:38:32 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 18:29:01 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:25:58 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	swapB(s_swap *stackB)
+void	swapb(s_swap *stackB)
 {
 	s_swap *ptr;
 	int temp;

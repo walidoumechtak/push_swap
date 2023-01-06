@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 21:33:34 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 16:21:20 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 06:25:46 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,17 @@ int					*desc_array(s_swap *list, int len);
 long long int		ft_atoi(const char *str);
 int					*get_array(s_swap *lst, int len);
 
-void				pushA(s_swap **stackA, s_swap **stackB);
-void				pushB(s_swap **stackA, s_swap **stackB);
-void				swapA(s_swap **stackA);
-void				swapB(s_swap *stackB);
-void				swapAB(s_swap *stackA, s_swap *stackB);
-void				rotateA(s_swap **stackA);
-void				rotateB(s_swap **stackB);
-void				rotateAll(s_swap **stackA, s_swap **stackB);
+void				pusha(s_swap **stackA, s_swap **stackB);
+void				pushb(s_swap **stackA, s_swap **stackB);
+void				swapa(s_swap **stackA);
+void				swapb(s_swap *stackB);
+void				swapab(s_swap *stackA, s_swap *stackB);
+void				rotatea(s_swap **stackA);
+void				rotateb(s_swap **stackB);
+void				rotateall(s_swap **stackA, s_swap **stackB);
 void				rra(s_swap **stackA);
 void				rrb(s_swap **stackB);
-void				rrAll(s_swap **stackA, s_swap **stackB);
+void				rrall(s_swap **stackA, s_swap **stackB);
 
 int					isall_digit(char **av, int ac);
 int					isnot_repeated(char **av, int ac);
