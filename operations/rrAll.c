@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   rrAll.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 17:24:39 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:26:11 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 16:11:54 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rrall(s_swap **stackA, s_swap **stackB)
+void	rrall(s_swap **stackA, s_swap **stackB)
 {
-    rra(stackA);
-    rrb(stackB);
-    ft_putstr("rrr\n", 1);
+	rra(stackA);
+	rrb(stackB);
+	ft_putstr("rrr\n", 1);
 }

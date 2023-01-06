@@ -3,28 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 17:47:20 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/04 19:50:16 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 16:19:13 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void    ra(s_swap **stackA)     
+void	ra(s_swap **stackA)
 {
-    s_swap  *ptr;
-    s_swap  *last;
-    int len;
+	s_swap	*ptr;
+	s_swap	*last;
+	int		len;
 
-    len = list_size(*stackA);
-    if (len > 1)
-    {
-        last = get_last_lst(*stackA);
-        ptr = *stackA;
-        *stackA = (*stackA) -> next;
-        ptr -> next = NULL;    
-        last -> next = ptr;
-    }
+	len = list_size(*stackA);
+	if (len > 1)
+	{
+		last = get_last_lst(*stackA);
+		ptr = *stackA;
+		*stackA = (*stackA)->next;
+		ptr->next = NULL;
+		last->next = ptr;
+	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:10:12 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:42:29 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 16:18:42 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,16 +64,16 @@ int	ft_errors(char **av, int ac)
 
 int	ft_read(s_swap **stackA, s_swap **stackB, char *str)
 {
-    int temp;
+	int	temp;
 
-    str = get_next_line(0);
-    while (str)
-    {
-        temp = ft_checker(stackA, stackB, str);
-        free(str);
-        str = get_next_line(0);
-    }
-    return (temp);
+	str = get_next_line(0);
+	while (str)
+	{
+		temp = ft_checker(stackA, stackB, str);
+		free(str);
+		str = get_next_line(0);
+	}
+	return (temp);
 }
 
 int	main(int ac, char **av)
@@ -82,19 +82,16 @@ int	main(int ac, char **av)
 	s_swap	*stackb;
 	char	*str;
 	int		temp;
-    
+
 	str = NULL;
-    if (ft_errors(av, ac) == 0)
+	if (ft_errors(av, ac) == 0)
 	{
 		ft_putstr("Error\n", 2);
 		return (0);
 	}
-    temp = is_inputs_sorted(av, ac - 1);
+	temp = is_inputs_sorted(av, ac - 1);
 	if (temp == 1)
 		return (0);
-	// str = malloc(4 * sizeof(char));
-	// if (!str)
-	// 	return(free(str), 0);
 	fill_stack(&stacka, av, ac);
 	temp = ft_read(&stacka, &stackb, str);
 	free(str);

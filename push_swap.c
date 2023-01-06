@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 13:08:59 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 14:53:52 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 16:21:49 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ void	push_swap(s_swap **list, int ac, s_swap **stackB)
 
 int	main(int ac, char **av)
 {
-	s_swap *stackB;
-	s_swap *head;
-	s_swap *ptr;
+	s_swap	*stackb;
+	s_swap	*head;
+	s_swap	*ptr;
 
-	stackB = NULL;
+	stackb = NULL;
 	if (ac > 1)
 	{
 		if (isall_digit(av, ac - 1) == 0 || (isnot_repeated(av, ac - 1) == 0)
@@ -49,8 +49,8 @@ int	main(int ac, char **av)
 			return (0);
 		index_the_stack(head);
 		ptr = head;
-		push_swap(&head, list_size(head), &stackB);
-		lst_clear(&stackB);
+		push_swap(&head, list_size(head), &stackb);
+		lst_clear(&stackb);
 	}
 	return (0);
 }

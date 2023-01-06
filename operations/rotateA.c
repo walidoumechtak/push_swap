@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   rotateA.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 12:53:53 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:27:16 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 16:08:19 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    rotatea(s_swap **stackA)     
+void	rotatea(s_swap **stackA)
 {
-    s_swap	*ptr;
-    s_swap	*last;
-    int len;
+	s_swap	*ptr;
+	s_swap	*last;
+	int		len;
 
-    len = list_size(*stackA);
-    if (len > 1)
-    {
-        last = get_last_lst(*stackA);
-        ptr = *stackA;
-        *stackA = (*stackA) -> next;
-        ptr->next = NULL;    
-        last->next = ptr;
-        ft_putstr("ra\n", 1);
-    }
+	len = list_size(*stackA);
+	if (len > 1)
+	{
+		last = get_last_lst(*stackA);
+		ptr = *stackA;
+		*stackA = (*stackA)->next;
+		ptr->next = NULL;
+		last->next = ptr;
+		ft_putstr("ra\n", 1);
+	}
 }
