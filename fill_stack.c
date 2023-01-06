@@ -6,24 +6,53 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:44:25 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 08:18:59 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 11:31:33 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	fill_stack(s_swap **head, char **av, int ac)
+void	free_all(char **str)
 {
 	int	i;
-	int	cpt;
 
-	i = 2;
-	cpt = ac - 2;
-	(*head) = lst_new(ft_atoi(av[1]));
-	while (cpt > 0)
+	i = 0;
+	while (str[i] != 0)
 	{
-		add_back(head, lst_new(ft_atoi(av[i])));
+		free(str[i]);
 		i++;
-		cpt--;
 	}
+}
+
+void	fill_stack(s_swap **head, char **av, int ac)
+{
+	char	**s;
+	// int	cpt;
+	int	i;
+	int	j;
+
+	// i = 2;
+	// cpt = ac - 2;
+	// while (cpt > 0)
+	// {
+		// add_back(head, lst_new(ft_atoi(av[i])));
+	// 	i++;
+	// 	cpt--;
+	// }
+	(*head) = NULL;
+	i = 1;
+	while (i < ac)
+	{
+		j = 0;
+		s = ft_split(av[i], ' ');	
+		while (s[j] != 0)
+		{
+			add_back(head, lst_new(ft_atoi(s[j])));
+			j++;
+		}
+		free_all(s);
+		free(s);
+		i++;
+	}
+	
 }

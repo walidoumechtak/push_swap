@@ -25,6 +25,8 @@ OBJ=push_swap.o \
 	helpedFunction/ft_indexof.o \
 	helpedFunction/ft_role.o \
 	helpedFunction/desc_array.o \
+	helpedFunction/ft_split.o \
+	helpedFunction/ft_substr.o \
 	operations/pushA.o \
 	operations/pushB.o \
 	operations/reverseRA.o \
@@ -42,6 +44,8 @@ OBJ=push_swap.o \
 	cases/five.o \
 	cases/three.o \
 	cases/big_stack.o \
+	get_next_line./get_next_line.o \
+	get_next_line./get_next_line_utils.o \
 	
 OBS=checker_bonus/checker.o \
 	checker_bonus/operations/pa.o \
@@ -77,6 +81,8 @@ OBS=checker_bonus/checker.o \
 	helpedFunction/ft_role.o \
 	helpedFunction/desc_array.o \
 	helpedFunction/ft_strlena.o \
+	helpedFunction/ft_split.o \
+	helpedFunction/ft_substr.o \
 	operations/pushA.o \
 	operations/pushB.o \
 	operations/reverseRA.o \
@@ -97,21 +103,22 @@ OBS=checker_bonus/checker.o \
 	get_next_line./get_next_line.o \
 	get_next_line./get_next_line_utils.o \
 
+
 all : $(NAME)
 
 $(NAME):$(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ -fsanitize=address
 
 bonus : $(NAMEB)
 
 $(NAMEB):$(OBS)
-	$(CC) $(CFLAGS) -o $@ $^ -fsanitize=address
+	$(CC) $(CFLAGS) -o $@ $^ 
 
 clean:
 	rm -f $(OBJ) $(OBS)
 
 fclean:
-	rm -f $(NAME) $(OBJ) $(OBS)
+	rm -f $(NAME) $(NAMEB) $(OBJ) $(OBS)
 
 re:fclean all
 

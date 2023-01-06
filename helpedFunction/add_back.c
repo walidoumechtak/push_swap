@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 19:52:02 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/05 08:07:21 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 11:23:08 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ void	add_back(s_swap **list, s_swap *new)
 	p = *list;
 	if (!list || !new)
 		return ;
+	if (*list == NULL)
+	{
+		(*list) = new;
+		return ;
+	}
 	while ((p)->next != NULL)
 		(p) = (p)->next;
 	(p)->next = new;

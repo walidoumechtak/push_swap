@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 09:57:44 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 09:58:16 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 11:28:29 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,3 +87,12 @@ char	**ft_split(char const *s, char c)
 	split = to_split((char *)s, c, split);
 	return (split);
 }
+
+// int main(int ac, char **av)
+// {
+// 	char **p = ft_split(av[1], ' ');
+// 	printf("%s\n", p[0]);
+// 	printf("%s\n", p[1]);
+// 	p = ft_split(av[2], ' ');
+// 	printf("%s\n", p[0]);
+// }

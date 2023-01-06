@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 11:11:31 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 06:40:31 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 12:30:57 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	s_five_cases(s_swap **list, s_swap **stackB)
 		if (len == 3)
 			break ;
 	}
-	three(list, 4);
+	three(list, 3);
 }
 
 void	s_five(s_swap **list, s_swap **stackB, int ac)
@@ -59,7 +59,7 @@ void	s_five(s_swap **list, s_swap **stackB, int ac)
 
 	ptr = *list;
 	s_five_cases(list, stackB);
-	i = ac - 1 - 3;
+	i = ac - 3;
 	while (i > 0)
 	{
 		pusha(list, stackB);
