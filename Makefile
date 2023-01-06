@@ -44,8 +44,8 @@ OBJ=push_swap.o \
 	cases/five.o \
 	cases/three.o \
 	cases/big_stack.o \
-	get_next_line./get_next_line.o \
-	get_next_line./get_next_line_utils.o \
+	get_next_line/get_next_line.o \
+	get_next_line/get_next_line_utils.o \
 	
 OBS=checker_bonus/checker.o \
 	checker_bonus/operations/pa.o \
@@ -100,8 +100,8 @@ OBS=checker_bonus/checker.o \
 	cases/five.o \
 	cases/three.o \
 	cases/big_stack.o \
-	get_next_line./get_next_line.o \
-	get_next_line./get_next_line_utils.o \
+	get_next_line/get_next_line.o \
+	get_next_line/get_next_line_utils.o \
 
 
 all : $(NAME)
