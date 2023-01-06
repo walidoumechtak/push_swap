@@ -6,11 +6,20 @@
 /*   By: woumecht <woumecht@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 10:59:42 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 18:48:23 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 20:41:45 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+typedef struct s_norm
+{
+	int	cpt;
+	int	*arr;
+	int	len;
+	int	index;
+	int	i;
+}		t_norm;
 
 void	push_to_b(t_swap **stackA, t_swap **stackB, int n)
 {
@@ -41,57 +50,66 @@ void	push_to_b(t_swap **stackA, t_swap **stackB, int n)
 	}
 }
 
-void	go_back(t_swap **stackA, t_swap **stackB, int index, int cpt)
+void	go_back(t_swap **stackA, t_swap **stackB, t_norm *norm, int n)
 {
-	
+	if (n == 1)
+	{
+		pusha(stackA, stackB);
+		(norm->i)++;
+	}
+	else if (n == 2)
+	{
+		pusha(stackA, stackB);
+		rotatea(stackA);
+		(norm->cpt)++;
+	}
+	else if (n == 3)
+	{
+		rra(stackA);
+		(norm->cpt)--;
+		(norm->i)++;
+	}
+}
+
+void	norm2(t_swap **stackA, t_norm *norm)
+{
+	while ((norm->cpt) >= 0)
+	{
+		rra(stackA);
+		((norm->cpt))--;
+	}
+	if ((*stackA)->data > norm->arr[norm->len])
+		rotatea(stackA);
+	free(norm->arr);
 }
 
 void	go_back_to_a(t_swap **stackA, t_swap **stackB)
 {
-	int	cpt;
-	int	*arr;
-	int	len;
-	int	index;
-	int	i;
+	t_norm	*norm;
 
-	i = 0;
-	len = list_size(*stackB) - 1;
-	cpt = 0;
-	arr = desc_array(*stackB, len);
+	norm = malloc(1 * sizeof(t_norm));
+	(norm->i) = 0;
+	norm->len = list_size(*stackB) - 1;
+	(norm->cpt) = 0;
+	norm->arr = desc_array(*stackB, norm->len);
 	while (*stackB != NULL)
 	{
-		index = ft_index_of(*stackB, arr[i]);
-		if (index != -1)
+		norm->index = ft_index_of(*stackB, norm->arr[(norm->i)]);
+		if (norm->index != -1)
 		{
-			if ((*stackB)->data == arr[i])
-			{
-				pusha(stackA, stackB);
-				i++;
-			}
-			else if (cpt == 0 || (*stackB)->data > get_last_lst(*stackA)->data)
-			{
-				pusha(stackA, stackB);
-				rotatea(stackA);
-				cpt++;
-			}
+			if ((*stackB)->data == norm->arr[(norm->i)])
+				go_back(stackA, stackB, norm, 1);
+			else if (norm->cpt == 0
+				|| (*stackB)->data > get_last_lst(*stackA)->data)
+				go_back(stackA, stackB, norm, 2);
 			else
-				ft_role(stackB, list_size(*stackB), index);
+				ft_role(stackB, list_size(*stackB), norm->index);
 		}
 		else
-		{
-			rra(stackA);
-			cpt--;
-			i++;
-		}
+			go_back(stackA, stackB, norm, 3);
 	}
-	while (cpt >= 0)
-	{
-		rra(stackA);
-		cpt--;
-	}
-	if ((*stackA)->data > arr[len])
-		rotatea(stackA);
-	free(arr);
+	norm2(stackA, norm);
+	free(norm);
 }
 
 void	big_stack(t_swap **stackA, t_swap **stackB, int nm)
