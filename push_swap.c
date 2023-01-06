@@ -6,7 +6,7 @@
 /*   By: woumecht <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 13:08:59 by woumecht          #+#    #+#             */
-/*   Updated: 2023/01/06 13:06:23 by woumecht         ###   ########.fr       */
+/*   Updated: 2023/01/06 14:53:52 by woumecht         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	push_swap(s_swap **list, int ac, s_swap **stackB)
 	}
 	else if (ac == 3)
 		three(list, ac);
-	else if (ac <= 20)
+	else if (ac <= 5)
 		s_five(list, stackB, ac);
 	else if (ac <= 100)
 		big_stack(list, stackB, 4);
@@ -34,7 +34,7 @@ int	main(int ac, char **av)
 	s_swap *stackB;
 	s_swap *head;
 	s_swap *ptr;
-	
+
 	stackB = NULL;
 	if (ac > 1)
 	{
