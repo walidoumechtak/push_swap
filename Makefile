@@ -7,7 +7,6 @@ OBJ=push_swap.o \
 	fill_stack.o \
 	helpedFunction/add_back.o \
 	helpedFunction/add_front.o \
-	helpedFunction/delOne.o \
 	helpedFunction/ft_atoi.o \
 	helpedFunction/list_size.o \
 	helpedFunction/lst_new.o \
@@ -61,7 +60,6 @@ OBS=checker_bonus/checker.o \
 	fill_stack.o \
 	helpedFunction/add_back.o \
 	helpedFunction/add_front.o \
-	helpedFunction/delOne.o \
 	helpedFunction/ft_atoi.o \
 	helpedFunction/list_size.o \
 	helpedFunction/lst_new.o \
